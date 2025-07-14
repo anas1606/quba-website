@@ -21,7 +21,7 @@ body {
 /* Navbar Styles */
 .navbar {
     background: var(--white-color);
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     right: 0;
@@ -306,7 +306,7 @@ body {
 /* Mobile Menu */
 .mobile-menu {
     position: fixed;
-    top: 45px;
+    top: 50px;
     left: 0;
     right: 0;
     background: var(--white-color);
@@ -332,15 +332,6 @@ body {
     border-bottom: 1px solid #f3f4f6;
 }
 
-.mobile-nav-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-    padding-top: 20px;
-    border-top: 1px solid #f3f4f6;
-}
-
 /* Responsive Design */
 @media (max-width: 1024px) {
     .navbar .nav-menu .mega-menu {
@@ -352,10 +343,15 @@ body {
     }
 }
 
+@media (min-width: 769px) {
+    .mobile-menu {
+        display: none;
+    }
+}
+
 @media (max-width: 768px) {
 
     .navbar .nav-menu,
-    .navbar .nav-right .contact-btn,
     .navbar .nav-right .search-btn {
         display: none;
     }
@@ -637,4 +633,274 @@ body {
         width: 100%;
     }
 
+}
+
+/* container css */
+.container {
+    width: 100%;
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+
+.container-fluid {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* highlight section */
+.container-fluid.highlight-section {
+    background: #1e1d28;
+    color: #fff;
+    padding-top: 50px;
+}
+
+.highlight-section .highlight-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+}
+
+.highlight-section .highlight-content .highlight-text {
+    padding-top: 10px;
+}
+
+.highlight-section .highlight-content .highlight-text h6 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.highlight-section .highlight-content .highlight-text p {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.highlight-section .highlight-content .highlight-stats {
+    border-top: 1px solid #54575e;
+    padding: 30px 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+    row-gap: 40px;
+}
+
+.highlight-section .highlight-content .highlight-stats .state {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.highlight-section .highlight-content .highlight-stats .state h5 {
+    font-size: 40px;
+    font-weight: 200;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.highlight-section .highlight-content .highlight-stats .state p {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.container-fluid.highlight-section .client-logo-carousel {
+    overflow: hidden;
+    background: #1e1d28;
+    padding: 50px 0;
+}
+
+.container-fluid.highlight-section .client-logo-carousel .carousel-track {
+    display: flex;
+    width: fit-content;
+    animation: scroll 20s linear infinite;
+}
+
+.container-fluid.highlight-section .client-logo-carousel .carousel-item {
+    flex: 0 0 auto;
+    padding: 0 40px;
+}
+
+.container-fluid.highlight-section .client-logo-carousel .carousel-item img {
+    height: 50px;
+    /* adjust logo size */
+    display: block;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.container-fluid.highlight-section .client-logo-carousel .carousel-item img:hover {
+    opacity: 1;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 991.98px) {
+    .highlight-section .highlight-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .highlight-section .highlight-content .highlight-stats {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px 0;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .container-fluid.highlight-section {
+        padding-top: 30px;
+    }
+
+    .highlight-section .highlight-content .highlight-stats .state h5 {
+        font-size: 32px;
+    }
+
+    .container-fluid.highlight-section .client-logo-carousel {
+        padding: 30px 0;
+    }
+}
+
+/* industry section */
+.industry-section {
+    padding: 60px 0;
+}
+.industry-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.industry-header h6 {
+    flex: 1 1 100%;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+    margin: 0 0 24px;
+}
+
+.industry-header h2 {
+    flex: 1 1 auto;
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    color: #222;
+}
+
+.industry-nav {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-btn {
+    border: 1px solid #ccc;
+    background: #fff;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover,
+.nav-btn.active {
+    background: #000;
+    color: #fff;
+    border-color: #000;
+}
+
+.industry-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0px;
+}
+
+.industry-card {
+    border-left: 1px solid #e0e0e0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: box-shadow 0.3s ease;
+    background: #fff;
+}
+
+.industry-card .icon {
+    width: fit-content;
+    background-color: #C2D4FF;
+    padding: 4px 6px;
+    border-radius: 8px;
+}
+
+.industry-card .icon img {
+    width: 50px;
+    height: 50px;
+}
+
+.industry-card h3 {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #222;
+}
+
+.industry-card p {
+    font-size: 14px;
+    color: #555;
+    margin: 4px 0;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100px;
+    border-radius: 4px;
+    object-fit: cover;
+    margin-top: 10px;
 }
