@@ -24,17 +24,14 @@
       import { PageMaker } from "./orbitron.core.js";
 
       document.addEventListener("DOMContentLoaded", () => {
-        PageMaker("home", "home-page dark-mode", () => {
-          console.log("PageMaker has built the page");
-
-          // now that Orbitron has built the page, we inject and run index.js
-          const sw = document.createElement("script");
-          sw.src = "./assets/script/index.js";
-          document.body.appendChild(sw);
-          sw.onload = () => {
-            console.log("index.js has been loaded and executed");
-          };
-        });
+        PageMaker("home", "home-page dark-mode")
+          .then(() => {
+            const sw = document.createElement("script");
+            sw.src = "./assets/script/index.js";
+            document.body.appendChild(sw);
+            sw.onload = () => console.log("index.js loaded and executed");
+          })
+          .catch((err) => console.error("[Orbitron] page build failed:", err));
       });
     </script>
   </body>
