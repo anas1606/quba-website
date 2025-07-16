@@ -1,0 +1,160 @@
+/* industry section */
+.industry-section {
+  padding: 60px 0;
+}
+
+.industry-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.industry-header h6 {
+  flex: 1 1 100%;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  margin: 0 0 24px;
+}
+
+.industry-header h2 {
+  flex: 1 1 auto;
+  font-size: 32px;
+  line-height: 40px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: #222;
+}
+
+.industry-nav {
+  display: flex;
+  gap: 10px;
+}
+
+.industry-nav .nav-btn {
+  border: 1px solid #ccc;
+  background: #fff;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  transition: all 0.3s ease;
+}
+
+.industry-nav .nav-btn:disabled {
+  cursor: not-allowed;
+}
+
+.industry-nav .nav-btn:hover:enabled {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+.industry-cards {
+  display: grid;
+  /* grid-template-columns: repeat(4, 1fr); */
+  gap: 0px;
+}
+
+.industry-card {
+  position: relative;
+  overflow: hidden;
+  border-left: 1px solid #e0e0e0;
+  padding: 20px 20px 120px 20px;
+  transition: box-shadow 0.3s ease;
+  height: 250px;
+  background: #fff;
+  cursor: pointer;
+  margin-right: 0px !important;
+}
+
+.industry-card .icon {
+  width: fit-content;
+  background-color: #c2d4ff;
+  padding: 4px 6px;
+  border-radius: 8px;
+}
+
+.industry-card .icon img {
+  width: 50px;
+  height: 50px;
+}
+
+.industry-card h3 {
+  font-size: 20px;
+  margin: 10px 0;
+  color: #222;
+}
+
+.industry-card p {
+  font-size: 12px;
+  color: #555;
+  margin: 4px 0;
+}
+
+.card-image {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 0;
+  padding: 0 20px;
+  transition: height 0.4s ease, padding 0.4s ease;
+}
+
+.card-link {
+  height: 40px;
+  padding: 0 25px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.card-link a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+.card-link i {
+  rotate: -40deg;
+}
+.industry-card > *:not(.card-image) {
+  position: relative;
+  z-index: 1;
+}
+
+.industry-card:hover .card-image {
+  height: 100%;
+  padding: 0;
+}
+
+.industry-card:hover .card-link {
+  opacity: 1;
+  height: 40px;
+  padding: 0 25px;
+}
+
+.industry-card:hover h3,
+.industry-card:hover p {
+  color: white;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+@media screen and (max-width: 991px) {
+  .industry-section {
+    padding: 40px 0;
+  }
+}

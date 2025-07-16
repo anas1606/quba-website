@@ -1,83 +1,65 @@
-// Orbitron Layout Engine
-// A lightweight modular section loader for static HTML projects
-/**
- * Creates an element of given tag, assigns multiple class names, appends to body, and returns it.
- * @param {string} tagName - Tag name to create (e.g., 'section', 'nav', 'div', 'footer').
- * @param {string} className - Space-separated class names to assign to the element.
- * @returns {HTMLElement} The newly created element.
- */
-function wrapper(tagName = 'section', className = '') {
+// orbitron.core.js
+// ----- import the config and turn this into an ES module -----
+import { pageConfig } from "./orbitron.config.js";
+
+// Your “root” base path.
+// If your site lives at https://example.com/, use '/'
+const basePath = window.ORBITRON_BASE_PATH || "/";
+
+/** wrapper, SectionLoader unchanged... **/
+function wrapper(tagName = "section", className = "") {
   const el = document.createElement(tagName);
-  if (className) {
-    className.split(/\s+/).forEach(cls => el.classList.add(cls));
-  }
+  if (className) className.split(/\s+/).forEach((c) => el.classList.add(c));
   document.body.appendChild(el);
   return el;
 }
 
-/**
- * Fetches an HTML fragment and injects it into a target container.
- * @param {string} fileLocation - Path to the HTML file.
- * @param {string|HTMLElement} target - A space-separated class name string or HTMLElement.
- */
 function SectionLoader(fileLocation, target) {
-  console.log(`Loading section from ${fileLocation} into`, target);
+  // automatically prepend the basePath
+  const url = new URL(
+    fileLocation.replace(/^\.\//, ""),
+    window.location.origin + basePath
+  );
 
   let container;
-  if (typeof target === 'string') {
-    const selector = '.' + target.trim().split(/\s+/).join('.');
-    container = document.querySelector(selector);
+  if (typeof target === "string") {
+    container = document.querySelector(
+      "." + target.trim().split(/\s+/).join(".")
+    );
   } else if (target instanceof HTMLElement) {
     container = target;
   }
 
   if (!container) {
-    console.warn('Container not found:', target);
+    console.warn("Container not found:", target);
     return;
   }
 
-  fetch(fileLocation)
-    .then((response) => {
-      if (!response.ok) throw new Error(response.statusText);
-      return response.text();
+  fetch(url)
+    .then((r) => {
+      if (!r.ok) throw new Error(r.statusText);
+      return r.text();
     })
     .then((html) => {
       container.innerHTML = html;
     })
     .catch((err) => {
-      console.error(`Failed to load ${fileLocation}:`, err);
+      console.error(`Failed to load ${url}:`, err);
     });
 }
 
 /**
- * Configuration: define pages and their sections.
- * Each key is a pageName, mapping to an array of [ tagName|null, className(s), fileLocation ]
+ * pageConfig is now imported above.
  */
-const pageConfig = {
-  home: [
-    ['section', 'highlight-section', './components/Home/HighlightSection.html'],
-    ['section', 'industry-section', './components/Home/IndustrySection.html'],
-  ],
-  about: [
-    ['section', 'highlight-section', '../../components/Home/HighlightSection.html'],
-    ['section', 'industry-section', '../../components/Home/IndustrySection.html'],
-  ]
-};
 
-/**
- * Builds a page: sets <body> ID, optionally creates wrappers, and loads each section.
- * @param {string} pageName - Key in pageConfig
- * @param {string} bodyId - id (and optional classes) to assign to <body>
- */
-function PageMaker(pageName, bodyId) {
-  // Handle multiple class names in bodyId (e.g. 'home-page dark-mode')
+function PageMaker(pageName, bodyId, onComplete) {
   const [id, ...classes] = bodyId.trim().split(/\s+/);
   document.body.id = id;
-  classes.forEach(cls => document.body.classList.add(cls));
+  classes.forEach((c) => document.body.classList.add(c));
 
   const sections = pageConfig[pageName];
   if (!sections) {
-    console.error(`No pageConfig found for page: ${pageName}`);
+    console.error(`No config for page: ${pageName}`);
     return;
   }
 
@@ -89,4 +71,11 @@ function PageMaker(pageName, bodyId) {
       SectionLoader(file, cls);
     }
   });
+
+  if (typeof onComplete === "function") {
+    onComplete();
+  }
 }
+console.log("core file");
+// Export if you want to call from other modules:
+export { wrapper, SectionLoader, PageMaker };
