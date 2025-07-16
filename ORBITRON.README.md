@@ -130,4 +130,4 @@ MIT — Free to use, improve, and share.
 
 ---
 
-Made with 💡 by \[YourName].
+Made with 💡 by [Faizal Kadiwal].
