@@ -1,0 +1,363 @@
+.overview-panel {
+    position: relative;
+    background-image: url('/assets/images/overview.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.overview-panel::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    /* adjust opacity here */
+    z-index: -1;
+    /* keep it behind content */
+}
+
+
+
+.data-ai-panel {
+    position: relative;
+    background-image: url('/assets/images/DATA.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.data-ai-panel::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    /* adjust opacity here */
+    z-index: -1;
+    /* keep it behind content */
+}
+
+.fintech-panel {
+    position: relative;
+    background-image: url('/assets/images/fintech.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.fintech-panel::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    /* adjust opacity here */
+    z-index: -1;
+    /* keep it behind content */
+}
+
+.energy-panel {
+    position: relative;
+    background-image: url('/assets/images/energy.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.energy-panel::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    /* adjust opacity here */
+    z-index: -1;
+    /* keep it behind content */
+}
+
+.hero-wrapper {
+    display: flex;
+    height: 80vh;
+    width: 95vw;
+    overflow: hidden;
+    gap: 10px;
+}
+
+/* Main Panel Layout */
+.hero-panel {
+    flex: 1;
+    display: flex;
+    align-items: stretch;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    color: white;
+    padding: 0;
+    transition: flex 0.5s ease, transform 0.5s ease;
+    /* Add this */
+}
+
+
+.panel-blur-content {
+    flex: 1;
+    /* NEW: let it take full space */
+    height: 100%;
+    /* ensure full height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: filter 0.4s ease;
+    z-index: 1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* Label - Always Visible */
+.panel-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(180deg);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+
+    /* Single transition block for unified movement */
+    transition:
+        top 1s ease,
+        transform 0.8s ease;
+}
+
+
+
+/* When hero-panel is active AND label moves */
+.hero-panel.label-move .panel-label {
+    top: 20px;
+    right: 20px;
+    left: auto;
+    transform: rotate(0deg) translate(0, 0);
+    writing-mode: horizontal-tb;
+    text-orientation: initial;
+}
+
+.hero-panel.label-move .label-text {
+    height: auto;
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+
+
+/* Rectangle label box */
+.label-text {
+    position: relative;
+    padding: 30px 15px;
+    height: 30vh;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.348);
+    /* fully solid, no opacity */
+    z-index: 1;
+    overflow: hidden;
+}
+
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.label-text::after,
+.label-text::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 3px;
+    border-radius: 10px;
+    background: conic-gradient(from var(--angle), #006aff, #ff4545);
+    z-index: -1;
+    animation: spin 3s linear infinite;
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+.label-text::before {
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+
+    to {
+        --angle: 360deg;
+    }
+}
+
+
+/* Blur when not active */
+.hero-panel:not(.active) .panel-blur-content {
+    filter: blur(5px);
+}
+
+
+/* Hover Enlarge (Optional) */
+.hero-panel:not(.active):hover {
+    flex: 1.5;
+    z-index: 2;
+}
+
+/* Active Panel Expanded */
+.hero-panel.active {
+    flex: 10;
+    cursor: default;
+}
+
+/* Panel Content Visibility */
+.panel-content {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+    padding: 30px;
+    max-width: 400px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.hero-panel.active .panel-content {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Typography */
+.panel-content h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.panel-content p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* CTA Buttons */
+.cta-button {
+    background: #fff;
+    color: #000;
+    padding: 10px 18px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background 0.2s ease-in-out;
+}
+
+.cta-button:hover {
+    background: #ddd;
+}
+
+.cta-button.dark {
+    background: #000;
+    color: #fff;
+}
+
+.cta-button.dark:hover {
+    background: #333;
+}
+
+.progress-title-wrap {
+    width: 100%; /* remaining space after 60% left margin */
+    margin-left: 0%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    position: relative;
+  }
+  
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #fff);
+    animation: fill-bar 10s linear forwards;
+}
+
+.section-line {
+    height: 1px;
+    width: 80%;
+    background: rgba(255, 255, 255, 0.1);
+    /* subtle track background */
+    overflow: hidden;
+    position: relative;
+}
+
+.section-label {
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: white;
+}
+
+@keyframes fill-bar {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+.progress-bound-content {
+    width: 100%; /* remaining space after 60% left margin */
+    margin-left: 0%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  
+  .progress-aligned {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  
+  .content-to-show {
+    width: 60%;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    pointer-events: none;
+  }
+  
+  .content-to-show.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  
+  
+  
+  
+  
+  

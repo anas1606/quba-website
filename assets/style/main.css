@@ -1,0 +1,6 @@
+.hero-container {
+    width: 95vw;
+    margin: 0 auto;        /* Center it horizontally */
+    padding: 20px 0;       /* Optional vertical padding */
+    overflow: hidden;
+  }
