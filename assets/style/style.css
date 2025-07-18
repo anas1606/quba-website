@@ -2,6 +2,8 @@
 @import url("./home/highlight.css");
 @import url("./home/industry.css");
 @import url("./home/hero.css");
+@import url("./home/contact.css");
+@import url("./home/story.css");
 
 :root {
   --primary-color: #2563eb;
