@@ -1,21 +1,17 @@
-// orbitron.core.js
-// ----- import the config and turn this into an ES module -----
+/* orbitron.core.js (refactored) */
 import { pageConfig } from "./orbitron.config.js";
 
-// Your “root” base path.
-// If your site lives at https://example.com/, use '/'
 const basePath = window.ORBITRON_BASE_PATH || "/";
 
-/** wrapper, SectionLoader unchanged... **/
 function wrapper(tagName = "section", className = "") {
   const el = document.createElement(tagName);
-  if (className) className.split(/\s+/).forEach((c) => el.classList.add(c));
+  className && className.split(/\s+/).forEach(c => el.classList.add(c));
   document.body.appendChild(el);
   return el;
 }
 
+// Returns a Promise that resolves when content is injected
 function SectionLoader(fileLocation, target) {
-  // automatically prepend the basePath
   const url = new URL(
     fileLocation.replace(/^\.\//, ""),
     window.location.origin + basePath
@@ -24,58 +20,43 @@ function SectionLoader(fileLocation, target) {
   let container;
   if (typeof target === "string") {
     container = document.querySelector(
-      "." + target.trim().split(/\s+/).join(".")
+      "." + target.trim().split(/\s+/).join('.')
     );
   } else if (target instanceof HTMLElement) {
     container = target;
   }
+  if (!container) return Promise.reject(new Error(`Container not found: ${target}`));
 
-  if (!container) {
-    console.warn("Container not found:", target);
-    return;
-  }
-
-  fetch(url)
-    .then((r) => {
-      if (!r.ok) throw new Error(r.statusText);
-      return r.text();
-    })
-    .then((html) => {
-      container.innerHTML = html;
-    })
-    .catch((err) => {
-      console.error(`Failed to load ${url}:`, err);
-    });
+  return fetch(url)
+    .then(r => { if (!r.ok) throw new Error(r.statusText); return r.text(); })
+    .then(html => { container.innerHTML = html; });
 }
 
-/**
- * pageConfig is now imported above.
- */
+// PageMaker now returns a Promise
+export function PageMaker(pageName, bodyId) {
+  return new Promise((resolve, reject) => {
+    const [id, ...classes] = bodyId.trim().split(/\s+/);
+    document.body.id = id;
+    classes.forEach(c => document.body.classList.add(c));
 
-function PageMaker(pageName, bodyId, onComplete) {
-  const [id, ...classes] = bodyId.trim().split(/\s+/);
-  document.body.id = id;
-  classes.forEach((c) => document.body.classList.add(c));
-
-  const sections = pageConfig[pageName];
-  if (!sections) {
-    console.error(`No config for page: ${pageName}`);
-    return;
-  }
-
-  sections.forEach(([tag, cls, file]) => {
-    if (tag) {
-      const el = wrapper(tag, cls);
-      SectionLoader(file, el);
-    } else {
-      SectionLoader(file, cls);
+    const sections = pageConfig[pageName];
+    if (!Array.isArray(sections)) {
+      return reject(new Error(`No config for page: ${pageName}`));
     }
-  });
 
-  if (typeof onComplete === "function") {
-    onComplete();
-  }
+    // map to Promises
+    const loaders = sections.map(([tag, cls, file]) => {
+      if (tag) {
+        const el = wrapper(tag, cls);
+        return SectionLoader(file, el);
+      }
+      return SectionLoader(file, cls);
+    });
+
+    Promise.all(loaders)
+      .then(() => resolve())
+      .catch(err => reject(err));
+  });
 }
-console.log("core file");
-// Export if you want to call from other modules:
-export { wrapper, SectionLoader, PageMaker };
+
+console.log("[Orbitron] core initialized");

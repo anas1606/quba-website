@@ -1,0 +1,278 @@
+.container-fluid.contact-section {
+    background: #1E1D28;
+    color: #ECECEC;
+    padding: 5% 0;
+}
+
+.container-fluid.contact-section .contact-inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 3%;
+}
+
+.container-fluid.contact-section .contact-testimonial {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #fafafa;
+    color: #222;
+    border-radius: 8px;
+    padding: 2rem;
+}
+
+.container-fluid.contact-section .contact-form {
+    width: 60%;
+}
+
+/* ---- Form styling ---- */
+.container-fluid.contact-section .contact-form h2 {
+    font-size: 2rem;
+    line-height: 50px;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+}
+
+.container-fluid.contact-section .two-cols {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10%;
+}
+
+.container-fluid.contact-section .form-group {
+    flex: 1;
+    margin-bottom: 2.5rem;
+}
+
+.container-fluid.contact-section .form-group label {
+    display: block;
+    font-size: 0.875rem;
+    margin-bottom: 0.3rem;
+}
+
+.container-fluid.contact-section .form-group input,
+.container-fluid.contact-section .form-group textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #555;
+    resize: vertical;
+    padding: 0.5rem 0;
+    color: #ECECEC;
+    font-size: 1rem;
+}
+
+.container-fluid.contact-section .form-group input::placeholder,
+.container-fluid.contact-section .form-group textarea::placeholder {
+    color: #777;
+}
+
+.container-fluid.contact-section .form-group input:focus,
+.container-fluid.contact-section .form-group textarea:focus {
+    outline: none;
+    border-bottom-color: #AAA;
+}
+
+/* checkbox + privacy note */
+.container-fluid.contact-section .form-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.container-fluid.contact-section .form-checkbox input {
+    width: 1rem;
+    height: 1rem;
+}
+
+.container-fluid.contact-section .form-checkbox label {
+    font-size: 0.875rem;
+}
+
+.container-fluid.contact-section .privacy-note {
+    font-size: 0.75rem;
+    color: #777;
+    margin-bottom: 1.5rem;
+}
+
+.container-fluid.contact-section .privacy-note a {
+    color: #ECECEC;
+    text-decoration: underline;
+}
+
+/* button */
+.btn-primary {
+    background: #FFF;
+    color: #5c5b5b;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background 0.3s ease, color 0.3s ease;
+    transform-origin: center center;
+}
+
+.btn-primary span {
+    z-index: 990;
+}
+
+.btn-primary span,
+.btn-primary i {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.btn-primary i {
+    transform: rotate(-45deg);
+}
+
+.btn-primary:hover {
+    background: #0045E6;
+    color: white;
+}
+
+.btn-primary:hover i {
+    transform: translateX(-75px) rotate(-45deg);
+}
+
+.btn-primary:hover span {
+    transform: translateX(15px);
+}
+
+/* ---- Testimonial styling ---- */
+.container-fluid.contact-section .contact-testimonial h4 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+}
+
+.container-fluid.contact-section .contact-testimonial .quote-icon {
+    font-size: 2rem;
+}
+
+.container-fluid.contact-section .contact-testimonial blockquote {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 1rem 0 2rem;
+    color: #555;
+}
+
+.container-fluid.contact-section .author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.container-fluid.contact-section .author img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.container-fluid.contact-section .author {
+    align-items: normal;
+}
+
+.container-fluid.contact-section .contact-testimonial .swiper-timer-line {
+    width: 100%;
+    height: 1.5px;
+    background-color: #e0e0e0;
+    margin-top: 16px;
+    overflow: hidden;
+    border-radius: 2px;
+    margin-bottom: 30px;
+}
+
+.container-fluid.contact-section .contact-testimonial .timer-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #000;
+    transition: width 0s;
+}
+
+.container-fluid.contact-section .author strong {
+    font-size: 14px;
+}
+
+.container-fluid.contact-section .author span {
+    font-size: 12px;
+    color: #666;
+}
+
+/* nav arrows */
+.container-fluid.contact-section .testimonial-nav {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.container-fluid.contact-section .nav-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: 1px solid #000;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.container-fluid.contact-section .nav-btn:hover {
+    background: #000;
+    color: white;
+}
+
+.container-fluid.contact-section .nav-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background: none;
+    border: 1px solid #000;
+    color: black;
+}
+
+.testimonial-swiper {
+    width: -webkit-fill-available;
+}
+
+@media screen and (max-width: 991px) {
+    .container-fluid.contact-section .contact-inner {
+        flex-direction: column;
+    }
+
+    .container-fluid.contact-section .contact-testimonial {
+        width: 100%;
+    }
+
+    .container-fluid.contact-section .contact-form {
+        margin-bottom: 50px;
+        width: 100%;
+    }
+
+    .container-fluid.contact-section .form-group {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .container-fluid.contact-section .two-cols {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0;
+    }
+
+    .container-fluid.contact-section .contact-form h2 {
+        font-size: 1.5rem;
+        line-height: 35px;
+    }
+
+    .container-fluid.contact-section .contact-testimonial {
+        padding: 1rem;
+    }
+}
