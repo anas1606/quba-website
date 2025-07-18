@@ -6,6 +6,7 @@ export const pageConfig = {
     ["main", "hero-container", "./components/home/HeroSection.html"],
     ["section", "highlight-section", "./components/home/HighlightSection.html"],
     ["section", "solution-section", "./components/home/IndustrySection.html"],
+    ["section", "update-section", "./components/home/LatestUpdate.html"],
   ],
   about: [
     [
