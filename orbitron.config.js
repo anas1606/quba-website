@@ -7,6 +7,7 @@ export const pageConfig = {
     ["section", "story-container", "./components/home/StorySection.html"],
     ["section", "highlight-section", "./components/home/HighlightSection.html"],
     ["section", "solution-section", "./components/home/IndustrySection.html"],
+    ["section", "update-section", "./components/home/LatestUpdate.html"],
     ["section", "container-fluid contact-section", "./components/home/ContactSection.html"],
   ],
   about: [
