@@ -184,7 +184,7 @@ const swiper = new Swiper(".industry-cards.swiper-container", {
     nextEl: ".ind-swiper-next",
     prevEl: ".ind-swiper-prev",
   },
-  spaceBetween: 20,
+  spaceBetween: 0,
   breakpoints: {
     320: { slidesPerView: 1, slidesPerGroup: 1 },
     640: { slidesPerView: 2, slidesPerGroup: 1 },
@@ -271,4 +271,99 @@ if (initiallyActive) {
   //     const content = initiallyActive.querySelector('.content-to-show');
   //   if (content) content.classList.add('show');
   activatePanel(initiallyActive);
+}
+
+
+// testimonial-swiper.js
+const testimonialswiper = new Swiper('.testimonial-swiper', {
+  slidesPerView: 1,
+  spaceBetween: 24,
+  loop: true,
+  speed: 500,
+  effect: 'slide',
+  navigation: {
+    prevEl: '.testimonial-nav .prev',
+    nextEl: '.testimonial-nav .next',
+  },
+});
+
+let testimonialtimerInterval;
+const testimonialtimerBar = document.querySelector('.timer-bar');
+
+function testimonialresetTimerBar() {
+  testimonialtimerBar.style.transition = 'none';
+  testimonialtimerBar.style.width = '0%';
+
+  void testimonialtimerBar.offsetWidth;
+  testimonialtimerBar.style.transition = 'width 5s linear';
+  testimonialtimerBar.style.width = '100%';
+}
+
+function testimonialstartTimer() {
+  clearTimeout(testimonialtimerInterval);
+  testimonialresetTimerBar();
+
+  testimonialtimerInterval = setTimeout(() => {
+    testimonialswiper.slideNext();
+  }, 5000);
+}
+
+testimonialstartTimer();
+testimonialswiper.on('slideChangeTransitionStart', () => {
+  testimonialstartTimer();
+});
+
+
+// story animtaio
+
+const cards = document.querySelectorAll(".story-card")
+const videos = document.querySelectorAll(".card-video")
+
+// Create placeholder video sources since we don't have actual videos
+const videoSources = [
+  "https://samplelib.com/lib/preview/mp4/sample-5s.mp4",
+  "https://samplelib.com/lib/preview/mp4/sample-5s.mp4",
+  "https://samplelib.com/lib/preview/mp4/sample-5s.mp4",
+  "https://samplelib.com/lib/preview/mp4/sample-5s.mp4"
+]
+
+// Set video sources
+videos.forEach((video, index) => {
+  const source = video.querySelector("source")
+  if (source && videoSources[index]) {
+    source.src = videoSources[index]
+    video.load()
+  }
+})
+
+cards.forEach((card, index) => {
+  const video = card.querySelector(".card-video")
+  let isPlaying = false
+
+  // Handle mouse enter
+  card.addEventListener("mouseenter", () => {
+    cards.forEach((c) => c.classList.remove("featured"))
+    card.classList.add("featured")
+    // Pause all other videos
+    videos.forEach((v, i) => {
+      if (i !== index) {
+        v.pause()
+        v.currentTime = 0
+      }
+    })
+
+    // Play current video
+    if (video) {
+      video.play().catch((e) => {
+        console.log("Video play failed:", e)
+      })
+      isPlaying = true
+    }
+  })
+})
+
+// Set initial featured card (middle one)
+const initialFeatured = document.querySelector('[data-card="1"]')
+if (initialFeatured) {
+  initialFeatured.classList.add("featured")
 }
