@@ -56,7 +56,7 @@
   /* keep it behind content */
 }
 
-.energy-panel {
+.logistics-panel {
   position: relative;
   background-image: url("/assets/images/energy.jpg");
   background-size: cover;
@@ -235,9 +235,18 @@
 }
 
 /* Typography */
-.panel-content h1 {
-  font-size: 2rem;
-  margin-bottom: 10px;
+.panel-content h2 {
+  font-size: 3.5rem;
+  margin-top: 50px;
+  margin-bottom: -80px;
+  margin-left: -160px;
+  font-weight: 300;
+  text-align: left;
+  max-width: 40vw;
+  width: 40vw;
+  line-height: 1.1;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .panel-content p {
@@ -250,9 +259,8 @@
 .cta-button {
   background: #fff;
   color: #000;
-  padding: 10px 18px;
+  padding: 6px 18px;
   text-decoration: none;
-  font-weight: bold;
   border-radius: 4px;
   transition: background 0.2s ease-in-out;
 }
@@ -342,4 +350,36 @@
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
+}
+
+/* Service Bullets Styling */
+.service-bullets {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.bullet-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  gap: 20px;
+}
+
+.bullet-point {
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 400;
+  opacity: 0.9;
+  flex: 1;
+  text-align: left;
+  padding: 4px 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+
+.bullet-point:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
 }
