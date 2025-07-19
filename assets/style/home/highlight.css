@@ -17,7 +17,8 @@
 }
 
 .highlight-badge {
-  display: block;
+  display: inline-flex;
+  align-items: center;
   background: linear-gradient(135deg, #007bff, #0056b3);
   color: white;
   padding: 8px 16px;
@@ -42,7 +43,8 @@
 }
 
 .highlight-badge span {
-  font-weight: 500;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 .highlight-section .highlight-content .highlight-text h6 {
