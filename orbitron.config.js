@@ -4,7 +4,7 @@
 export const pageConfig = {
   home: [
     ["main", "hero-container", "./components/home/HeroSection.html"],
-    ["section", "story-container", "./components/home/StorySection.html"],
+    ["section", "story-container", "./components/home/ClientStorySection.html"],
     ["section", "highlight-section", "./components/home/HighlightSection.html"],
     ["section", "tech-stack-section", "./components/home/TechStackSection.html"],
     ["section", "solution-section", "./components/home/IndustrySection.html"],
