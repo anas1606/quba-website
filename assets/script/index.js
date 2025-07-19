@@ -295,8 +295,11 @@ const testimonialswiper = new Swiper('.testimonial-swiper', {
   slidesPerView: 1,
   spaceBetween: 24,
   loop: true,
-  speed: 500,
+  speed: 600,
   effect: 'slide',
+  fadeEffect: {
+    crossFade: true
+  },
   navigation: {
     prevEl: '.testimonial-nav .prev',
     nextEl: '.testimonial-nav .next',

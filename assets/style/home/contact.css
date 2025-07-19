@@ -1,7 +1,23 @@
 .container-fluid.contact-section {
-    background: #1E1D28;
+    background: linear-gradient(135deg, #1E1D28 0%, #2A2A3A 50%, #1E1D28 100%);
     color: #ECECEC;
     padding: 5% 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.container-fluid.contact-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(0, 69, 230, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(0, 102, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(255, 107, 53, 0.05) 0%, transparent 50%);
+    pointer-events: none;
 }
 
 .container-fluid.contact-section .contact-inner {
@@ -15,10 +31,79 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: #fafafa;
-    color: #222;
-    border-radius: 8px;
-    padding: 2rem;
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 2.5rem;
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 
+        inset 0 4px 8px rgba(255, 255, 255, 0.3),
+        inset 0 -4px 8px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.1),
+        0 2px 4px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.container-fluid.contact-section .contact-testimonial::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.2) 0%,
+        rgba(255, 255, 255, 0.05) 50%,
+        rgba(255, 255, 255, 0.1) 100%
+    );
+    border-radius: 20px;
+    z-index: -1;
+}
+
+.container-fluid.contact-section .contact-testimonial::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        45deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.1) 30%,
+        transparent 60%
+    );
+    border-radius: 20px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.container-fluid.contact-section .contact-testimonial::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.08) 50%,
+        transparent 70%
+    );
+    transform: rotate(45deg);
+    animation: shimmer 4s ease-in-out infinite;
+    z-index: -1;
+}
+
+@keyframes shimmer {
+    0%, 100% { transform: rotate(45deg) translateX(-100%); }
+    50% { transform: rotate(45deg) translateX(100%); }
 }
 
 .container-fluid.contact-section .contact-form {
@@ -144,10 +229,44 @@
 }
 
 /* ---- Testimonial styling ---- */
+.container-fluid.contact-section .testimonial-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #0045E6, #0066FF);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 69, 230, 0.3);
+    transform: translateY(0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: fit-content;
+}
+
+.container-fluid.contact-section .testimonial-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 69, 230, 0.4);
+}
+
+.container-fluid.contact-section .testimonial-badge i {
+    font-size: 0.75rem;
+    color: #FFD700;
+}
+
+.container-fluid.contact-section .badge-text {
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
 .container-fluid.contact-section .contact-testimonial h4 {
     font-size: 1rem;
     margin-bottom: 0.75rem;
-    font-weight: 500;
+    font-weight: 600;
+    color: #0045E6;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .container-fluid.contact-section .contact-testimonial .quote-icon {
@@ -156,9 +275,11 @@
 
 .container-fluid.contact-section .contact-testimonial blockquote {
     font-size: 0.95rem;
-    line-height: 1.5;
+    line-height: 1.6;
     margin: 1rem 0 2rem;
-    color: #555;
+    color: #ffffff;
+    font-weight: 400;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .container-fluid.contact-section .author {
@@ -182,27 +303,56 @@
 .container-fluid.contact-section .contact-testimonial .swiper-timer-line {
     width: 100%;
     height: 1.5px;
-    background-color: #e0e0e0;
+    background-color: transparent;
     margin-top: 16px;
-    overflow: hidden;
+    overflow: visible;
     border-radius: 2px;
     margin-bottom: 30px;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-3px); }
+}
+
+/* Simple Testimonial Slides */
+.testimonial-swiper .swiper-slide {
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center center;
+}
+
+.testimonial-swiper .swiper-slide-active {
+    transform: scale(1) translateY(0);
+    z-index: 3;
+    opacity: 1;
+    visibility: visible;
+}
+
+.testimonial-swiper .swiper-slide:not(.swiper-slide-active) {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.8) translateY(20px);
 }
 
 .container-fluid.contact-section .contact-testimonial .timer-bar {
     height: 100%;
     width: 0%;
-    background-color: #000;
+    background: #ffffff;
     transition: width 0s;
 }
 
 .container-fluid.contact-section .author strong {
     font-size: 14px;
+    color: #ffffff;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .container-fluid.contact-section .author span {
     font-size: 12px;
-    color: #666;
+    color: #FFD700;
+    font-weight: 500;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* nav arrows */
@@ -216,26 +366,27 @@
     align-items: center;
     justify-content: center;
     background: none;
-    border: 1px solid #000;
+    border: 1px solid #ffffff;
     width: 40px;
     height: 40px;
     border-radius: 50%;
     font-size: 1.2rem;
     cursor: pointer;
     transition: background 0.3s, color 0.3s;
+    color: #ffffff;
 }
 
 .container-fluid.contact-section .nav-btn:hover {
-    background: #000;
-    color: white;
+    background: #ffffff;
+    color: #1E1D28;
 }
 
 .container-fluid.contact-section .nav-btn:disabled {
     opacity: 0.6;
     cursor: not-allowed;
     background: none;
-    border: 1px solid #000;
-    color: black;
+    border: 1px solid #ffffff;
+    color: #ffffff;
 }
 
 .testimonial-swiper {
