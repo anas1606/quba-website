@@ -1,6 +1,7 @@
 /* industry section */
 .industry-section {
-  padding: 8% 0px;
+  padding: 10% 0px;
+  overflow: visible;
 }
 
 .industry-header {
@@ -8,7 +9,7 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 .industry-header h6 {
@@ -23,7 +24,7 @@
   flex: 1 1 auto;
   font-size: 40px;
   line-height: 48px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   font-weight: 400;
   color: #222;
 }
@@ -60,20 +61,38 @@
 
 .industry-cards {
   display: grid;
-  /* grid-template-columns: repeat(4, 1fr); */
-  gap: 0px;
+  gap: 15px;
+  overflow: visible;
+  margin: 0 20px;
+}
+
+.industry-cards .swiper-wrapper {
+  display: flex;
+  gap: 15px;
+  overflow: visible;
 }
 
 .industry-card {
   position: relative;
   overflow: hidden;
   border-left: 1px solid #e0e0e0;
-  padding: 20px 20px 0px 20px;
-  transition: box-shadow 0.3s ease;
-  height: 450px !important;
+  padding: 30px 25px 0px 25px;
+  transition: all 0.4s ease;
+  height: 550px !important;
   background: #fff;
   cursor: pointer;
   margin-right: 0px !important;
+  margin-bottom: 20px;
+  flex: 1;
+  min-width: 0;
+}
+
+.industry-card.card-expanded {
+  flex: 2;
+  transform: scale(1.02);
+  z-index: 10;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  border-left: 2px solid #007bff;
 }
 
 .industry-card .icon {
@@ -90,20 +109,23 @@
 }
 
 .industry-card h3 {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  font-size: 24px;
-  line-height: 36px;
+  overflow: visible;
+  text-overflow: unset;
+  white-space: normal;
+  font-size: 26px;
+  line-height: 38px;
   font-weight: 300;
-  margin: 10px 0 30px 0;
+  margin: 15px 0 35px 0;
   color: #222;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 .industry-card p {
-  font-size: 12px;
+  font-size: 14px;
+  line-height: 20px;
   color: #555;
-  margin: 4px 0 20px 0;
+  margin: 6px 0 25px 0;
 }
 
 .card-image {
@@ -111,9 +133,9 @@
   bottom: 0px;
   left: 0;
   width: 100%;
-  height: 150px;
+  height: 180px;
   z-index: 0;
-  padding: 0 20px;
+  padding: 0 25px;
   transition: height 0.4s ease, padding 0.4s ease;
 }
 
@@ -202,6 +224,6 @@
 
 @media screen and (max-width: 575px) {
   .industry-card {
-    height: 400px !important;
+    height: 500px !important;
   }
 }

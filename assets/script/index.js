@@ -192,6 +192,22 @@ const swiper = new Swiper(".industry-cards.swiper-container", {
   },
 });
 
+// Industry card hover effect
+const industryCards = document.querySelectorAll('.industry-card');
+industryCards.forEach(card => {
+  card.addEventListener('mouseenter', () => {
+    // Remove active class from all cards
+    industryCards.forEach(c => c.classList.remove('card-expanded'));
+    // Add active class to hovered card
+    card.classList.add('card-expanded');
+  });
+  
+  card.addEventListener('mouseleave', () => {
+    // Remove active class when mouse leaves
+    card.classList.remove('card-expanded');
+  });
+});
+
 // home page hero section
 const panels = document.querySelectorAll(".hero-panel");
 let currentIndex = 0;
