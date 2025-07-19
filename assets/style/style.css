@@ -5,6 +5,7 @@
 @import url("./home/latestUpdate.css");
 @import url("./home/contact.css");
 @import url("./home/story.css");
+@import url("./home/techStack.css");
 
 :root {
   --primary-color: #2563eb;

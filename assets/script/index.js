@@ -192,6 +192,8 @@ const swiper = new Swiper(".industry-cards.swiper-container", {
   },
 });
 
+
+
 // Industry card hover effect
 const industryCards = document.querySelectorAll('.industry-card');
 industryCards.forEach(card => {
