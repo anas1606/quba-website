@@ -214,6 +214,8 @@ industryCards.forEach(card => {
 const panels = document.querySelectorAll(".hero-panel");
 let currentIndex = 0;
 let progressTimer = null;
+let autoCycleEnabled = true; // Flag to control auto-cycling
+let userClickedIndex = null; // Track which index user clicked
 
 function activatePanel(panel) {
   // Remove active from all
@@ -227,6 +229,9 @@ function activatePanel(panel) {
   });
   // Set current active
   panel.classList.add("active");
+  
+  // Update current index
+  currentIndex = [...panels].indexOf(panel);
 
   // Animate label and progress bar after DOM settles
   requestAnimationFrame(() => {
@@ -257,28 +262,39 @@ function restartProgressBar(panel) {
     if (content) content.classList.add("show");
   }, 500); // adjust to match visual timing
 
+  // Always add the animation end listener, but check the flag inside
   newBar.addEventListener(
     "animationend",
     () => {
-      // Then proceed to next section
-      const currentIndex = [...panels].indexOf(panel);
-      const nextPanel = panels[currentIndex + 1] || panels[0];
-      const content = panel.querySelector(".content-to-show");
-      if (content) content.classList.remove("show");
-
-      activatePanel(nextPanel);
+      // If user clicked, go to next index after the clicked one
+      if (userClickedIndex !== null) {
+        const nextIndex = (userClickedIndex + 1) % panels.length;
+        const nextPanel = panels[nextIndex];
+        userClickedIndex = null; // Reset user click tracking
+        activatePanel(nextPanel);
+      } else if (autoCycleEnabled) {
+        // Normal auto-cycling
+        const nextIndex = (currentIndex + 1) % panels.length;
+        const nextPanel = panels[nextIndex];
+        activatePanel(nextPanel);
+      }
     },
     { once: true }
   );
 }
 
 // Setup click
-panels.forEach((panel) => {
+panels.forEach((panel, index) => {
   panel.addEventListener("click", () => {
     if (!panel.classList.contains("active")) {
-      // const content = panel.querySelector('.content-to-show');
-      // if (content) content.classList.add('show');
+      userClickedIndex = index; // Track which index was clicked
+      autoCycleEnabled = false; // Disable auto-cycling when user clicks
       activatePanel(panel);
+      
+      // Re-enable auto-cycling after 30 seconds
+      setTimeout(() => {
+        autoCycleEnabled = true;
+      }, 30000);
     }
   });
 });

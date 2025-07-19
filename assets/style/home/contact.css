@@ -233,12 +233,12 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    background: linear-gradient(135deg, #0045E6, #0066FF);
+    background: linear-gradient(135deg, #006aff, #ff4545);
     color: white;
-    padding: 0.5rem 1rem;
+    padding: 12px 20px;
     border-radius: 25px;
     margin-bottom: 1rem;
-    box-shadow: 0 4px 15px rgba(0, 69, 230, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 106, 255, 0.3);
     transform: translateY(0);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: fit-content;
@@ -246,11 +246,11 @@
 
 .container-fluid.contact-section .testimonial-badge:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 69, 230, 0.4);
+    box-shadow: 0 6px 20px rgba(0, 106, 255, 0.4);
 }
 
 .container-fluid.contact-section .testimonial-badge i {
-    font-size: 0.75rem;
+    font-size: 16px;
     color: #FFD700;
 }
 
