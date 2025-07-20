@@ -34,7 +34,7 @@
   font-size: 1.2rem;
   color: #7f8c8d;
   font-weight: 400;
-  max-width: 600px;
+  max-width: 94vw;
   margin: 0 auto;
   line-height: 1.6;
 }
@@ -42,9 +42,8 @@
 .tech-stack-marquee {
   width: 94vw;
   overflow: hidden;
-  margin: -30px auto;
+  margin: 0 auto;
   position: relative;
-  padding: 40px 0;
 }
 
 .tech-stack-track {
@@ -91,7 +90,7 @@
 }
 
 .tech-item {
-  font-size: 52px;
+  font-size: 72px;
   font-weight: 600;
   color: #95a5a6;
   padding: 15px 10px;
@@ -99,14 +98,16 @@
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  min-width: 80px;
+  min-width: 100px;
   text-align: center;
   white-space: nowrap;
   flex-shrink: 0;
+  opacity: 0.8;
 }
 
 .tech-item:hover {
   color: #e74c3c;
+  opacity: 1;
 }
 
 .tech-stack-cta {
@@ -157,8 +158,9 @@
   }
   
   .tech-stack-marquee {
-    margin: -30px;
-    padding: 30px 0;
+    margin: 0 auto;
+    padding: 60px 0;
+    width: 94vw;
   }
   
   .tech-stack-track {
@@ -167,9 +169,9 @@
   }
   
   .tech-item {
-    font-size: 32px;
+    font-size: 48px;
     padding: 12px 8px;
-    min-width: 60px;
+    min-width: 80px;
   }
   
   .track-1 {
@@ -196,8 +198,9 @@
   }
   
   .tech-stack-marquee {
-    margin: -30px;
-    padding: 20px 0;
+    margin: 0 auto;
+    padding: 40px 0;
+    width: 94vw;
   }
   
   .tech-stack-track {
@@ -206,9 +209,9 @@
   }
   
   .tech-item {
-    font-size: 24px;
+    font-size: 36px;
     padding: 8px 6px;
-    min-width: 50px;
+    min-width: 70px;
   }
   
   .track-1 {
