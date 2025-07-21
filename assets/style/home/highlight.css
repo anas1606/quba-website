@@ -16,7 +16,7 @@
   padding-top: 30px;
 }
 
-.highlight-badge {
+.highlight-section .highlight-badge {
   display: inline-flex;
   align-items: center;
   background: linear-gradient(135deg, #006aff, #ff4545);
@@ -34,7 +34,7 @@
   overflow: hidden;
 }
 
-.highlight-badge::before {
+.highlight-section .highlight-badge::before {
   content: '';
   position: absolute;
   top: 0;
@@ -57,18 +57,18 @@
   }
 }
 
-.highlight-badge:hover {
+.highlight-section .highlight-badge:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 106, 255, 0.4);
 }
 
-.highlight-badge i {
+.highlight-section .highlight-badge i {
   margin-right: 8px;
   font-size: 16px;
   color: #FFD700;
 }
 
-.highlight-badge span {
+.highlight-section .highlight-badge span {
   font-weight: 600;
   letter-spacing: 0.5px;
   text-transform: uppercase;
