@@ -16,7 +16,7 @@
                 <source src="https://samplelib.com/lib/preview/mp4/sample-5s.mp4" type="video/mp4">
             </video>
             <div class="card-overlay">
-                <button class="play-button">
+                <button class="play-button" data-video-src="https://samplelib.com/lib/preview/mp4/sample-5s.mp4">
                     <i class="fa-solid fa-play"></i>
                     Watch the video
                 </button>
@@ -28,8 +28,10 @@
         <div class="card-footer">
             <img src="https://eleks.com/wp-content/uploads/tait-logo-color.svg" alt="Image 1">
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita, porro!</p>
-            <div class="story-link">
-                <a href="#">Learn more</a><i class="fa-solid fa-arrow-right"></i>
+            <div class="primary-link">
+                <i class="fa-solid fa-arrow-right"></i>
+                <a href="#">Learn more</a>
+                <i class="fa-solid fa-arrow-right"></i>
             </div>
         </div>
     </div>
@@ -40,7 +42,7 @@
                 <source src="https://samplelib.com/lib/preview/mp4/sample-5s.mp4" type="video/mp4">
             </video>
             <div class="card-overlay">
-                <button class="play-button">
+                <button class="play-button" data-video-src="https://samplelib.com/lib/preview/mp4/sample-5s.mp4">
                     <i class="fa-solid fa-play"></i>
                     Watch the video
                 </button>
@@ -52,8 +54,10 @@
         <div class="card-footer">
             <img src="https://eleks.com/wp-content/uploads/tait-logo-color.svg" alt="Image 1">
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita, porro!</p>
-            <div class="story-link">
-                <a href="#">Learn more</a><i class="fa-solid fa-arrow-right"></i>
+            <div class="primary-link">
+                <i class="fa-solid fa-arrow-right"></i>
+                <a href="#">Learn more</a>
+                <i class="fa-solid fa-arrow-right"></i>
             </div>
         </div>
     </div>
@@ -64,7 +68,7 @@
                 <source src="https://samplelib.com/lib/preview/mp4/sample-5s.mp4" type="video/mp4">
             </video>
             <div class="card-overlay">
-                <button class="play-button">
+                <button class="play-button" data-video-src="https://samplelib.com/lib/preview/mp4/sample-5s.mp4">
                     <i class="fa-solid fa-play"></i>
                     Watch the video
                 </button>
@@ -76,8 +80,10 @@
         <div class="card-footer">
             <img src="https://eleks.com/wp-content/uploads/tait-logo-color.svg" alt="Image 1">
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita, porro!</p>
-            <div class="story-link">
-                <a href="#">Learn more</a><i class="fa-solid fa-arrow-right"></i>
+            <div class="primary-link">
+                <i class="fa-solid fa-arrow-right"></i>
+                <a href="#">Learn more</a>
+                <i class="fa-solid fa-arrow-right"></i>
             </div>
         </div>
     </div>
@@ -88,7 +94,7 @@
                 <source src="https://samplelib.com/lib/preview/mp4/sample-5s.mp4" type="video/mp4">
             </video>
             <div class="card-overlay">
-                <button class="play-button">
+                <button class="play-button" data-video-src="https://samplelib.com/lib/preview/mp4/sample-5s.mp4">
                     <i class="fa-solid fa-play"></i>
                     Watch the video
                 </button>
@@ -100,15 +106,24 @@
         <div class="card-footer">
             <img src="https://eleks.com/wp-content/uploads/tait-logo-color.svg" alt="Image 1">
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita, porro!</p>
-            <div class="story-link">
-                <a href="#">Learn more</a><i class="fa-solid fa-arrow-right"></i>
+            <div class="primary-link">
+                <i class="fa-solid fa-arrow-right"></i>
+                <a href="#">Learn more</a>
+                <i class="fa-solid fa-arrow-right"></i>
             </div>
         </div>
     </div>
 
 </div>
 <div>
-    <button type="button" class="btn-primary story-btn">
+    <button type="button" class="discover-more btn-primary">
         <span>Discover more insights</span><i class="fa-solid fa-arrow-right"></i>
     </button>
+</div>
+<!-- full‑screen video modal -->
+<div id="videoModal" class="video-modal">
+    <div class="video-modal__inner">
+        <button class="video-modal__close"><i class="fa-solid fa-xmark"></i></button>
+        <iframe id="modalIframe" allow="autoplay; fullscreen" allowfullscreen frameborder="0"></iframe>
+    </div>
 </div>

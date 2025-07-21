@@ -4,17 +4,17 @@
   overflow: visible;
 }
 
-.industry-header {
+.industry-section .industry-header {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
   flex-direction: column;
   position: relative;
 }
 
-.industry-badge {
+.industry-section .industry-badge {
   display: block;
   background: linear-gradient(135deg, #006aff, #ff4545);
   color: white;
@@ -31,7 +31,7 @@
   overflow: hidden;
 }
 
-.industry-badge::before {
+.industry-section .industry-badge::before {
   content: '';
   position: absolute;
   top: 0;
@@ -46,26 +46,28 @@
   0% {
     left: -100%;
   }
+
   50% {
     left: 100%;
   }
+
   100% {
     left: 100%;
   }
 }
 
-.industry-badge:hover {
+.industry-section .industry-badge:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(0, 106, 255, 0.4);
 }
 
-.industry-badge i {
+.industry-section .industry-badge i {
   font-size: 16px;
   margin-right: 8px;
   color: #FFD700;
 }
 
-.industry-badge span {
+.industry-section .industry-badge span {
   font-weight: 600;
   letter-spacing: 0.5px;
   text-transform: uppercase;
@@ -73,7 +75,7 @@
 
 
 
-.industry-header h6 {
+.industry-section .industry-header h6 {
   flex: 1 1 100%;
   font-size: 16px;
   line-height: 20px;
@@ -81,7 +83,7 @@
   margin: 0 0 24px;
 }
 
-.industry-header h2 {
+.industry-section .industry-header h2 {
   flex: 1 1 auto;
   font-size: 40px;
   line-height: 48px;
@@ -90,7 +92,7 @@
   color: #222;
 }
 
-.industry-nav {
+.industry-section .industry-nav {
   display: flex;
   gap: 10px;
   position: absolute;
@@ -98,7 +100,7 @@
   right: 0;
 }
 
-.industry-nav .nav-btn {
+.industry-section .industry-nav .nav-btn {
   border: 1px solid #ccc;
   background: #fff;
   width: 36px;
@@ -113,29 +115,29 @@
   transition: all 0.3s ease;
 }
 
-.industry-nav .nav-btn:disabled {
+.industry-section .industry-nav .nav-btn:disabled {
   cursor: not-allowed;
 }
 
-.industry-nav .nav-btn:hover:enabled {
+.industry-section .industry-nav .nav-btn:hover:enabled {
   background: #000;
   color: #fff;
   border-color: #000;
 }
 
-.industry-cards {
+.industry-section .industry-cards {
   display: grid;
   gap: 15px;
   overflow: visible;
   margin: 0;
 }
 
-.industry-cards .swiper-wrapper {
+.industry-section .industry-cards .swiper-wrapper {
   display: flex;
   overflow: visible;
 }
 
-.industry-card {
+.industry-section .industry-card {
   position: relative;
   overflow: hidden;
   border-left: 1px solid #e0e0e0;
@@ -150,14 +152,14 @@
   min-width: 0;
 }
 
-.industry-card.card-expanded {
+.industry-section .industry-card.card-expanded {
   flex: 1.2;
   transform: scale(1.02);
   z-index: 10;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
 }
 
-.industry-card.card-expanded h3 {
+.industry-section .industry-card.card-expanded h3 {
   overflow: visible;
   text-overflow: unset;
   white-space: normal;
@@ -165,7 +167,7 @@
   hyphens: auto;
 }
 
-.industry-card.card-expanded p {
+.industry-section .industry-card.card-expanded p {
   overflow: visible;
   text-overflow: unset;
   display: block;
@@ -174,7 +176,7 @@
   white-space: normal;
 }
 
-.industry-card .icon {
+.industry-section .industry-card .icon {
   width: fit-content;
   background-color: #c2d4ff;
   padding: 4px 6px;
@@ -182,12 +184,12 @@
   transition: border 0.4s ease, background-color 0.4s ease;
 }
 
-.industry-card .icon img {
+.industry-section .industry-card .icon img {
   width: 40px;
   height: 40px;
 }
 
-.industry-card h3 {
+.industry-section .industry-card h3 {
   overflow: visible;
   text-overflow: unset;
   white-space: normal;
@@ -203,7 +205,7 @@
   align-items: flex-start;
 }
 
-.industry-card p {
+.industry-section .industry-card p {
   font-size: 14px;
   line-height: 22px;
   color: #555;
@@ -216,11 +218,11 @@
   white-space: normal;
 }
 
-.industry-card p:last-of-type {
+.industry-section .industry-card p:last-of-type {
   margin-bottom: 60px;
 }
 
-.card-image {
+.industry-section .card-image {
   position: absolute;
   bottom: 0px;
   left: 0;
@@ -231,72 +233,43 @@
   transition: height 0.4s ease, padding 0.4s ease;
 }
 
-.card-link {
-  height: 40px;
-  padding: 0 25px;
-  display: flex;
-  align-items: center;
-  gap: 4px;
+.industry-section .primary-link {
   opacity: 0;
+  color: white;
   transition: opacity 0.4s ease;
 }
 
-.card-link a:hover~.card-link,
-.card-link:hover {
-  opacity: 1;
-}
-
-.card-link a,
-.card-link i {
+.industry-section .primary-link a {
   color: white;
-  text-decoration: none;
-  font-size: 14px;
-  order: unset;
-  transition: transform 0.3s ease;
+  margin-right: 4px;
 }
 
-.card-link a {
-  z-index: 999;
-}
-
-.card-link i {
-  transform: translateX(4px) rotate(-40deg);
-}
-
-.card-link a:hover {
-  transform: translateX(20px);
-}
-
-.card-link a:hover+i {
-  transform: translateX(-83px) rotate(-40deg);
-}
-
-.industry-card>*:not(.card-image) {
+.industry-section .industry-card>*:not(.card-image) {
   position: relative;
   z-index: 1;
 }
 
-.industry-card:hover .card-image {
+.industry-section .industry-card:hover .card-image {
   height: 100%;
   padding: 0;
 }
 
-.industry-card:hover .card-link {
+.industry-section .industry-card:hover .primary-link {
   opacity: 1;
   height: 40px;
   padding: 0 25px;
 }
 
-.industry-card:hover .icon {
+.industry-section .industry-card:hover .icon {
   background-color: white;
 }
 
-.industry-card:hover h3,
-.industry-card:hover p {
+.industry-section .industry-card:hover h3,
+.industry-section .industry-card:hover p {
   color: white;
 }
 
-.card-image img {
+.industry-section .card-image img {
   width: 100%;
   height: 100%;
   border-radius: 8px;
@@ -304,18 +277,18 @@
 }
 
 @media screen and (max-width: 991px) {
-  .industry-section {
+  .industry-section .industry-section {
     padding: 10% 0px;
   }
 
-  .industry-header h2 {
+  .industry-section .industry-header h2 {
     font-size: 30px;
     line-height: 38px;
   }
 }
 
 @media screen and (max-width: 575px) {
-  .industry-card {
+  .industry-section .industry-card {
     height: 600px !important;
   }
 }
