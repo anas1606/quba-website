@@ -1,7 +1,7 @@
 /* orbitron.core.js (refactored) */
 import { pageConfig } from "./orbitron.config.js";
 
-const basePath = window.ORBITRON_BASE_PATH || "/";
+const basePath = "https://anas1606.github.io/quba-website/" || "/";
 
 function wrapper(tagName = "section", className = "") {
   const el = document.createElement(tagName);
