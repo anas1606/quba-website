@@ -20,4 +20,11 @@ export const pageConfig = {
     ],
     ["section", "solution-section", "./components/about/IndustrySection.html"],
   ],
+  contact: [
+    [
+      null,
+      "contact-form-section",
+      "./components/home/ContactSection.html",
+    ],
+  ],
 };
