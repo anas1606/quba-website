@@ -10,6 +10,7 @@ export const pageConfig = {
     ["section", "solution-section", "./components/home/IndustrySection.html"],
     ["section", "update-section", "./components/home/LatestUpdate.html"],
     ["section", "container-fluid contact-section", "./components/home/ContactSection.html"],
+    ["footer", "", "./components/home/Footer.html"],
   ],
   about: [
     [
