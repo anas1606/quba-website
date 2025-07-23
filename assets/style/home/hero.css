@@ -1,7 +1,7 @@
 /* hero section home page */
 .overview-panel {
   position: relative;
-  background-image: url("/assets/images/overview.jpg");
+  background-image: url("../../images/overview.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -20,7 +20,7 @@
 
 .data-ai-panel {
   position: relative;
-  background-image: url("/assets/images/DATA.jpg");
+  background-image: url("../../images/DATA.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -39,7 +39,7 @@
 
 .fintech-panel {
   position: relative;
-  background-image: url("/assets/images/fintech.jpg");
+  background-image: url("../../images/fintech.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -58,7 +58,7 @@
 
 .logistics-panel {
   position: relative;
-  background-image: url("/assets/images/energy.jpg");
+  background-image: url("../../images/energy.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
