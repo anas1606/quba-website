@@ -1,7 +1,23 @@
 /* orbitron.core.js (refactored) */
 import { pageConfig } from "./orbitron.config.js";
 
-const basePath = window.ORBITRON_BASE_PATH || "https://anas1606.github.io/quba-website/";
+// Auto-detect GitHub Pages deployment and set correct base path
+function getBasePath() {
+  // Check if we're on GitHub Pages
+  if (window.location.hostname.includes('github.io')) {
+    const pathSegments = window.location.pathname.split('/').filter(segment => segment);
+    if (pathSegments.length > 0) {
+      // For GitHub Pages, the first path segment is usually the repository name
+      return `/${pathSegments[0]}/`;
+    }
+  }
+  
+  // Use custom base path or default to root
+  return window.ORBITRON_BASE_PATH || "/";
+}
+
+const basePath = getBasePath();
+
 function wrapper(tagName = "section", className = "") {
   const el = document.createElement(tagName);
   className && className.split(/\s+/).forEach(c => el.classList.add(c));
@@ -11,10 +27,15 @@ function wrapper(tagName = "section", className = "") {
 
 // Returns a Promise that resolves when content is injected
 function SectionLoader(fileLocation, target) {
-  const url = new URL(
-    fileLocation.replace(/^\.\//, ""),
-    window.location.origin + basePath
-  );
+  // Ensure fileLocation starts with ./ for relative paths
+  const relativePath = fileLocation.startsWith('./') ? fileLocation : `./${fileLocation}`;
+  const cleanPath = relativePath.replace(/^\.\//, "");
+  
+  // Construct the full URL
+  const baseUrl = window.location.origin + basePath;
+  const fullUrl = new URL(cleanPath, baseUrl);
+  
+  console.log(`[Orbitron] Loading: ${fileLocation} -> ${fullUrl.href}`);
 
   let container;
   if (typeof target === "string") {
@@ -26,9 +47,18 @@ function SectionLoader(fileLocation, target) {
   }
   if (!container) return Promise.reject(new Error(`Container not found: ${target}`));
 
-  return fetch(url)
-    .then(r => { if (!r.ok) throw new Error(r.statusText); return r.text(); })
-    .then(html => { container.innerHTML = html; });
+  return fetch(fullUrl)
+    .then(r => { 
+      if (!r.ok) {
+        console.error(`[Orbitron] Failed to load ${fullUrl.href}: ${r.status} ${r.statusText}`);
+        throw new Error(`${r.status} ${r.statusText}`);
+      }
+      return r.text(); 
+    })
+    .then(html => { 
+      container.innerHTML = html; 
+      console.log(`[Orbitron] Successfully loaded: ${fileLocation}`);
+    });
 }
 
 // PageMaker now returns a Promise
@@ -59,3 +89,5 @@ export function PageMaker(pageName, bodyId) {
 }
 
 console.log("[Orbitron] core initialized");
+console.log(`[Orbitron] Base path detected: ${basePath}`);
+console.log(`[Orbitron] Current location: ${window.location.href}`);
