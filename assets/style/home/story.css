@@ -332,6 +332,7 @@
 .primary-link {
     display: flex;
     align-items: center;
+    width: fit-content !important;
     font-size: 14px;
     color: black;
     perspective: 400px;

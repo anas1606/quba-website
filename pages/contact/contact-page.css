@@ -1,4 +1,7 @@
 /* Contact Page Specific Styles */
+#contact-page .container {
+    overflow-x: visible !important;
+}
 
 /* Override tech-header background to remove colored section */
 .tech-header {
@@ -86,9 +89,11 @@
     0% {
         left: -100%;
     }
+
     50% {
         left: 100%;
     }
+
     100% {
         left: 100%;
     }
@@ -271,19 +276,15 @@
 .contact-details a {
     display: block;
     color: #2563eb;
+    font-size: 14px;
     text-decoration: none;
     font-weight: 500;
     margin-bottom: 4px;
-    transition: color 0.3s ease;
-}
-
-.contact-details a:hover {
-    color: #1d4ed8;
 }
 
 .btn-schedule {
     background: #2563eb;
-    color: white;
+    color: white !important;
     padding: 8px 16px;
     border-radius: 6px;
     text-decoration: none;
@@ -294,6 +295,10 @@
 
 .btn-schedule:hover {
     background: #1d4ed8;
+}
+
+.contact-page-cta .btn-primary:hover i {
+    transform: translateX(-160px) rotate(-45deg) !important;
 }
 
 .availability {
@@ -316,8 +321,6 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 32px;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 .office-card {
@@ -616,30 +619,30 @@
     .contact-header {
         padding: 80px 0 60px;
     }
-    
+
     .contact-header h1 {
         font-size: 32px;
     }
-    
+
     .header-features {
         gap: 20px;
     }
-    
+
     .contact-methods {
         grid-template-columns: 1fr;
         gap: 24px;
     }
-    
+
     .offices-grid {
         grid-template-columns: 1fr;
         gap: 24px;
     }
-    
+
     .cta-content {
         grid-template-columns: 1fr;
         text-align: center;
     }
-    
+
     .cta-actions {
         flex-direction: row;
         justify-content: center;
@@ -650,25 +653,25 @@
     .contact-header h1 {
         font-size: 28px;
     }
-    
+
     .header-subtitle {
         font-size: 16px;
     }
-    
+
     .header-features {
         flex-direction: column;
         gap: 16px;
     }
-    
+
     .section-header h2 {
         font-size: 28px;
     }
-    
+
     .cta-text h2 {
         font-size: 24px;
     }
-    
+
     .cta-actions {
         flex-direction: column;
     }
-} 
+}
