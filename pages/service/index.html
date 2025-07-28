@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../assets/style/style.css">
+    <link rel="stylesheet" href="../../assets/style/service/service.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+    <script src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
+    <!-- navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="/" class="logo-link">Quba<sup>®</sup></a>
+            </div>
+
+            <ul class="nav-menu">
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">
+                        Services
+                        <span class="dropdown-indicator"></span>
+                    </a>
+                    <div class="service-mega-menu mega-menu">
+                        <div class="mega-menu-container">
+                            <div class="mega-menu-sidebar">
+                                <div class="sidebar-item active" data-target="engineering">
+                                    <h3>Engineering</h3>
+                                    <p>End-to-end engineering services for seamless delivery.</p>
+                                </div>
+                                <div class="sidebar-item" data-target="advisory">
+                                    <h3>Advisory</h3>
+                                    <p>Strategic guidance for products and services.</p>
+                                </div>
+                                <div class="sidebar-item" data-target="data-ai">
+                                    <h3>Data & AI</h3>
+                                    <p>Maximize your data value with custom solutions.</p>
+                                </div>
+                                <div class="sidebar-item" data-target="optimisation">
+                                    <h3>Optimisation</h3>
+                                    <p>Ensure flawless product performance.</p>
+                                </div>
+                                <div class="sidebar-item" data-target="expertise">
+                                    <h3>Expertise</h3>
+                                    <p>Drive growth with the latest tech and innovation.</p>
+                                </div>
+                            </div>
+
+                            <div class="mega-menu-content">
+                                <div class="services-grid" data-grid="engineering">
+                                    <div class="service-card">
+                                        <div class="service-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor"
+                                                    stroke-width="2" />
+                                                <path d="M9 9h6v6H9z" fill="currentColor" />
+                                            </svg>
+                                        </div>
+                                        <h4>Application Development</h4>
+                                        <p>Build robust software tailored to your business with exceptional UI/UX.</p>
+                                    </div>
+
+                                    <div class="service-card">
+                                        <div class="service-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" />
+                                                <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1" stroke="currentColor"
+                                                    stroke-width="2" />
+                                            </svg>
+                                        </div>
+                                        <h4>PoC Development</h4>
+                                        <p>Quickly test business ideas with functional prototypes and technical
+                                            validation.
+                                        </p>
+                                    </div>
+
+                                    <div class="service-card">
+                                        <div class="service-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+                                                    stroke="currentColor" stroke-width="2" />
+                                            </svg>
+                                        </div>
+                                        <h4>Product Delivery</h4>
+                                        <p>Launch products faster with agile teams and quality-driven delivery
+                                            pipelines.
+                                        </p>
+                                    </div>
+
+                                    <div class="service-card">
+                                        <div class="service-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                                                <circle cx="12" cy="12" r="6" stroke="currentColor" stroke-width="2" />
+                                                <circle cx="12" cy="12" r="2" stroke="currentColor" stroke-width="2" />
+                                            </svg>
+                                        </div>
+                                        <h4>Enterprise Applications</h4>
+                                        <div class="service-tags">
+                                            <p class="tag">ERP consulting</p>
+                                            <p class="tag">CRM consulting</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="service-card">
+                                        <div class="service-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor"
+                                                    stroke-width="2" />
+                                                <path d="M9 9h6v6H9z" fill="currentColor" />
+                                            </svg>
+                                        </div>
+                                        <h4>Legacy Modernization</h4>
+                                        <p>Upgrade outdated systems to modern platforms with minimal business
+                                            disruption.
+                                        </p>
+                                    </div>
+
+                                    <div class="service-card">
+                                        <div class="service-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"
+                                                    stroke="currentColor" stroke-width="2" />
+                                                <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2" />
+                                                <path d="M23 21v-2a4 4 0 0 0-3-3.87" stroke="currentColor"
+                                                    stroke-width="2" />
+                                            </svg>
+                                        </div>
+                                        <h4>Cloud Computing</h4>
+                                        <div class="service-tags">
+                                            <span class="tag">Cloud migration</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="services-grid" data-grid="advisory" style="display:none;">
+                                    <div class="service-card">
+                                        <div class="service-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor"
+                                                    stroke-width="2" />
+                                                <path d="M9 9h6v6H9z" fill="currentColor" />
+                                            </svg>
+                                        </div>
+                                        <h4>Technology Strategy</h4>
+                                        <p>Define a clear technology roadmap to align IT investments with your business
+                                            goals.</p>
+                                    </div>
+
+                                    <div class="service-card">
+                                        <div class="service-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" />
+                                                <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1" stroke="currentColor"
+                                                    stroke-width="2" />
+                                            </svg>
+                                        </div>
+                                        <h4>Solution Architecture</h4>
+                                        <p>Design scalable, secure architectures to support digital transformation
+                                            initiatives.</p>
+                                    </div>
+
+                                    <div class="service-card">
+                                        <div class="service-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+                                                    stroke="currentColor" stroke-width="2" />
+                                            </svg>
+                                        </div>
+                                        <h4>Digital Advisory</h4>
+                                        <p>Uncover opportunities to innovate with digital channels and emerging
+                                            technologies.</p>
+                                    </div>
+
+                                    <div class="service-card">
+                                        <div class="service-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                                                <circle cx="12" cy="12" r="6" stroke="currentColor" stroke-width="2" />
+                                                <circle cx="12" cy="12" r="2" stroke="currentColor" stroke-width="2" />
+                                            </svg>
+                                        </div>
+                                        <h4>Business Process Consulting</h4>
+                                        <div class="service-tags">
+                                            <span class="tag">ERP consulting</span>
+                                            <span class="tag">CRM consulting</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="service-card">
+                                        <div class="service-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor"
+                                                    stroke-width="2" />
+                                                <path d="M9 9h6v6H9z" fill="currentColor" />
+                                            </svg>
+                                        </div>
+                                        <h4>Risk Assessment</h4>
+                                        <p>Identify and mitigate potential technology risks before they impact your
+                                            operations.</p>
+                                    </div>
+
+                                    <div class="service-card">
+                                        <div class="service-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"
+                                                    stroke="currentColor" stroke-width="2" />
+                                                <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2" />
+                                                <path d="M23 21v-2a4 4 0 0 0-3-3.87" stroke="currentColor"
+                                                    stroke-width="2" />
+                                            </svg>
+                                        </div>
+                                        <h4>Cloud Readiness</h4>
+                                        <div class="service-tags">
+                                            <span class="tag">Cloud assessment</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="services-grid" data-grid="data-ai" style="display:none;">
+                                    <div class="service-card">
+                                        <div class="service-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor"
+                                                    stroke-width="2" />
+                                                <path d="M9 9h6v6H9z" fill="currentColor" />
+                                            </svg>
+                                        </div>
+                                        <h4>Data Engineering</h4>
+                                        <p>Build pipelines to consolidate, clean, and organize your enterprise data.</p>
+                                    </div>
+
+                                    <div class="service-card">
+                                        <div class="service-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" />
+                                                <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1" stroke="currentColor"
+                                                    stroke-width="2" />
+                                            </svg>
+                                        </div>
+                                        <h4>AI Model Development</h4>
+                                        <p>Develop machine learning models to unlock insights and automate
+                                            decision-making.
+                                        </p>
+                                    </div>
+
+                                    <div class="service-card">
+                                        <div class="service-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+                                                    stroke="currentColor" stroke-width="2" />
+                                            </svg>
+                                        </div>
+                                        <h4>Data Visualization</h4>
+                                        <p>Communicate complex data through compelling dashboards and reports.</p>
+                                    </div>
+
+                                    <div class="service-card">
+                                        <div class="service-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                                                <circle cx="12" cy="12" r="6" stroke="currentColor" stroke-width="2" />
+                                                <circle cx="12" cy="12" r="2" stroke="currentColor" stroke-width="2" />
+                                            </svg>
+                                        </div>
+                                        <h4>Analytics Platforms</h4>
+                                        <div class="service-tags">
+                                            <span class="tag">Power BI</span>
+                                            <span class="tag">Tableau</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="service-card">
+                                        <div class="service-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor"
+                                                    stroke-width="2" />
+                                                <path d="M9 9h6v6H9z" fill="currentColor" />
+                                            </svg>
+                                        </div>
+                                        <h4>Data Quality Management</h4>
+                                        <p>Ensure accuracy, completeness, and reliability across all your data assets.
+                                        </p>
+                                    </div>
+
+                                    <div class="service-card">
+                                        <div class="service-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"
+                                                    stroke="currentColor" stroke-width="2" />
+                                                <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2" />
+                                                <path d="M23 21v-2a4 4 0 0 0-3-3.87" stroke="currentColor"
+                                                    stroke-width="2" />
+                                            </svg>
+                                        </div>
+                                        <h4>Cloud Data Solutions</h4>
+                                        <div class="service-tags">
+                                            <span class="tag">Azure</span>
+                                            <span class="tag">AWS</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="services-grid" data-grid="optimisation" style="display:none;">
+                                    <div class="service-card">
+                                        <div class="service-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor"
+                                                    stroke-width="2" />
+                                                <path d="M9 9h6v6H9z" fill="currentColor" />
+                                            </svg>
+                                        </div>
+                                        <h4>Application development</h4>
+                                        <p>Bring your software vision to life with a tailored solution and deliver an
+                                            industry-leading user
+                                            experience.</p>
+                                    </div>
+
+                                    <div class="service-card">
+                                        <div class="service-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" />
+                                                <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1" stroke="currentColor"
+                                                    stroke-width="2" />
+                                            </svg>
+                                        </div>
+                                        <h4>PoC development</h4>
+                                        <p>Safely explore business-boosting concepts with robust testing and expert road
+                                            mapping.</p>
+                                    </div>
+
+                                    <div class="service-card">
+                                        <div class="service-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+                                                    stroke="currentColor" stroke-width="2" />
+                                            </svg>
+                                        </div>
+                                        <h4>Product-oriented delivery</h4>
+                                        <p>Ensure timely and cost-effective product delivery while prioritizing your
+                                            business objectives.
+                                        </p>
+                                    </div>
+
+                                    <div class="service-card">
+                                        <div class="service-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                                                <circle cx="12" cy="12" r="6" stroke="currentColor" stroke-width="2" />
+                                                <circle cx="12" cy="12" r="2" stroke="currentColor" stroke-width="2" />
+                                            </svg>
+                                        </div>
+                                        <h4>Enterprise applications</h4>
+                                        <div class="service-tags">
+                                            <span class="tag">ERP consulting</span>
+                                            <span class="tag">CRM consulting</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="service-card">
+                                        <div class="service-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor"
+                                                    stroke-width="2" />
+                                                <path d="M9 9h6v6H9z" fill="currentColor" />
+                                            </svg>
+                                        </div>
+                                        <h4>Legacy software modernization</h4>
+                                        <p>Transform your core legacy systems to elevate performance, agility,
+                                            scalability,
+                                            and UX.</p>
+                                    </div>
+
+                                    <div class="service-card">
+                                        <div class="service-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"
+                                                    stroke="currentColor" stroke-width="2" />
+                                                <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2" />
+                                                <path d="M23 21v-2a4 4 0 0 0-3-3.87" stroke="currentColor"
+                                                    stroke-width="2" />
+                                            </svg>
+                                        </div>
+                                        <h4>Cloud computing</h4>
+                                        <div class="service-tags">
+                                            <span class="tag">Cloud migration</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="services-grid" data-grid="expertise" style="display:none;">
+                                    <div class="service-card">
+                                        <div class="service-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor"
+                                                    stroke-width="2" />
+                                                <path d="M9 9h6v6H9z" fill="currentColor" />
+                                            </svg>
+                                        </div>
+                                        <h4>Application development</h4>
+                                        <p>Bring your software vision to life with a tailored solution and deliver an
+                                            industry-leading user
+                                            experience.</p>
+                                    </div>
+
+                                    <div class="service-card">
+                                        <div class="service-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" />
+                                                <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1" stroke="currentColor"
+                                                    stroke-width="2" />
+                                            </svg>
+                                        </div>
+                                        <h4>PoC development</h4>
+                                        <p>Safely explore business-boosting concepts with robust testing and expert road
+                                            mapping.</p>
+                                    </div>
+
+                                    <div class="service-card">
+                                        <div class="service-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+                                                    stroke="currentColor" stroke-width="2" />
+                                            </svg>
+                                        </div>
+                                        <h4>Product-oriented delivery</h4>
+                                        <p>Ensure timely and cost-effective product delivery while prioritizing your
+                                            business objectives.
+                                        </p>
+                                    </div>
+
+                                    <div class="service-card">
+                                        <div class="service-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                                                <circle cx="12" cy="12" r="6" stroke="currentColor" stroke-width="2" />
+                                                <circle cx="12" cy="12" r="2" stroke="currentColor" stroke-width="2" />
+                                            </svg>
+                                        </div>
+                                        <h4>Enterprise applications</h4>
+                                        <div class="service-tags">
+                                            <span class="tag">ERP consulting</span>
+                                            <span class="tag">CRM consulting</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="service-card">
+                                        <div class="service-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor"
+                                                    stroke-width="2" />
+                                                <path d="M9 9h6v6H9z" fill="currentColor" />
+                                            </svg>
+                                        </div>
+                                        <h4>Legacy software modernization</h4>
+                                        <p>Transform your core legacy systems to elevate performance, agility,
+                                            scalability,
+                                            and UX.</p>
+                                    </div>
+
+                                    <div class="service-card">
+                                        <div class="service-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"
+                                                    stroke="currentColor" stroke-width="2" />
+                                                <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2" />
+                                                <path d="M23 21v-2a4 4 0 0 0-3-3.87" stroke="currentColor"
+                                                    stroke-width="2" />
+                                            </svg>
+                                        </div>
+                                        <h4>Cloud computing</h4>
+                                        <div class="service-tags">
+                                            <span class="tag">Cloud migration</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">Industries <span class="dropdown-indicator"></span></a>
+                    <div class="industries-mega-menu mega-menu">
+                        <div class="industries-sidebar">
+                            <div class="industry-tab active" data-target="fintech">
+                                <div class="icon-box">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                                        alt="Fintech Icon" />
+                                </div>
+                                <span>Fintech</span>
+                            </div>
+                            <div class="industry-tab" data-target="energy">
+                                <div class="icon-box">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png"
+                                        alt="Energy Icon" />
+                                </div>
+                                <span>Energy</span>
+                            </div>
+                            <div class="industry-tab" data-target="healthcare">
+                                <div class="icon-box">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/2965/2965567.png"
+                                        alt="Healthcare Icon" />
+                                </div>
+                                <span>Healthcare</span>
+                            </div>
+                            <div class="industry-tab" data-target="retail">
+                                <div class="icon-box">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/3523/3523063.png"
+                                        alt="Retail Icon" />
+                                </div>
+                                <span>Retail</span>
+                            </div>
+                            <div class="industry-tab" data-target="logistics">
+                                <div class="icon-box">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/1055/1055646.png"
+                                        alt="Logistics Icon" />
+                                </div>
+                                <span>Logistics</span>
+                            </div>
+                            <div class="industry-tab" data-target="insurance">
+                                <div class="icon-box">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135711.png"
+                                        alt="Insurance Icon" />
+                                </div>
+                                <span>Insurance</span>
+                            </div>
+                            <div class="industry-tab" data-target="agriculture">
+                                <div class="icon-box">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/865/865860.png"
+                                        alt="Agriculture Icon" />
+                                </div>
+                                <span>Agriculture</span>
+                            </div>
+                            <div class="industry-tab" data-target="automotive">
+                                <div class="icon-box">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/2490/2490392.png"
+                                        alt="Automotive Icon" />
+                                </div>
+                                <span>Automotive</span>
+                            </div>
+                            <div class="industry-tab" data-target="media">
+                                <div class="icon-box">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png"
+                                        alt="Media Icon" />
+                                </div>
+                                <span>Media</span>
+                            </div>
+                            <div class="industry-tab" data-target="hospitality">
+                                <div class="icon-box">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/1792/1792845.png"
+                                        alt="Hospitality Icon" />
+                                </div>
+                                <span>Hospitality</span>
+                            </div>
+                        </div>
+
+                        <div class="industries-content">
+                            <div class="industry-panel active" data-panel="fintech">
+                                <h2>Fintech</h2>
+                                <p>Effectively manage risks, protect your assets against fraud, and maximize the
+                                    potential
+                                    of your data.
+                                </p>
+                                <img src="https://thumbs.dreamstime.com/b/fintech-financial-technology-concept-business-person-tablet-illustration-100188606.jpg"
+                                    alt="Fintech" />
+                            </div>
+
+                            <div class="industry-panel" data-panel="energy">
+                                <h2>Energy</h2>
+                                <p>Drive sustainable growth with advanced solutions for renewable and conventional
+                                    energy
+                                    sectors.</p>
+                                <img src="https://thumbs.dreamstime.com/b/fintech-financial-technology-concept-business-person-tablet-illustration-100188606.jpg"
+                                    alt="Energy" />
+                            </div>
+
+                            <div class="industry-panel" data-panel="healthcare">
+                                <h2>Healthcare</h2>
+                                <p>Improve patient outcomes and operational efficiency through innovative healthcare
+                                    technology.</p>
+                                <img src="https://thumbs.dreamstime.com/b/fintech-financial-technology-concept-business-person-tablet-illustration-100188606.jpg"
+                                    alt="Healthcare" />
+                            </div>
+
+                            <div class="industry-panel" data-panel="retail">
+                                <h2>Retail</h2>
+                                <p>Deliver personalized shopping experiences and streamline your retail operations
+                                    end-to-end.</p>
+                                <img src="https://thumbs.dreamstime.com/b/fintech-financial-technology-concept-business-person-tablet-illustration-100188606.jpg"
+                                    alt="Retail" />
+                            </div>
+
+                            <div class="industry-panel" data-panel="logistics">
+                                <h2>Logistics</h2>
+                                <p>Optimize your supply chain and improve delivery performance with smart logistics
+                                    solutions.</p>
+                                <img src="https://thumbs.dreamstime.com/b/fintech-financial-technology-concept-business-person-tablet-illustration-100188606.jpg"
+                                    alt="Logistics" />
+                            </div>
+
+                            <div class="industry-panel" data-panel="insurance">
+                                <h2>Insurance</h2>
+                                <p>Transform the insurance landscape with digital tools that enhance customer engagement
+                                    and
+                                    risk
+                                    management.</p>
+                                <img src="https://thumbs.dreamstime.com/b/fintech-financial-technology-concept-business-person-tablet-illustration-100188606.jpg"
+                                    alt="Insurance" />
+                            </div>
+
+                            <div class="industry-panel" data-panel="agriculture">
+                                <h2>Agriculture</h2>
+                                <p>Boost productivity and sustainability in agriculture through data-driven
+                                    decision-making.
+                                </p>
+                                <img src="https://thumbs.dreamstime.com/b/fintech-financial-technology-concept-business-person-tablet-illustration-100188606.jpg"
+                                    alt="Agriculture" />
+                            </div>
+
+                            <div class="industry-panel" data-panel="automotive">
+                                <h2>Automotive</h2>
+                                <p>Accelerate innovation across automotive design, manufacturing, and mobility services.
+                                </p>
+                                <img src="https://thumbs.dreamstime.com/b/fintech-financial-technology-concept-business-person-tablet-illustration-100188606.jpg"
+                                    alt="Automotive" />
+                            </div>
+
+                            <div class="industry-panel" data-panel="media">
+                                <h2>Media & Entertainment</h2>
+                                <p>Engage audiences with immersive content experiences powered by digital
+                                    transformation.
+                                </p>
+                                <img src="https://thumbs.dreamstime.com/b/fintech-financial-technology-concept-business-person-tablet-illustration-100188606.jpg"
+                                    alt="Media" />
+                            </div>
+
+                            <div class="industry-panel" data-panel="hospitality">
+                                <h2>Hospitality</h2>
+                                <p>Enhance guest experiences and operational agility in the hospitality sector.</p>
+                                <img src="https://thumbs.dreamstime.com/b/fintech-financial-technology-concept-business-person-tablet-illustration-100188606.jpg"
+                                    alt="Hospitality" />
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link">
+                        Clients <span class="dropdown-indicator"></span>
+                    </a>
+                    <div class="client-mega-menu mega-menu">
+                        <div class="client-column">
+                            <h4>Our Clients</h4>
+                            <p>
+                                We are proud of contributing to the success of the world’s leading brands.
+                            </p>
+                            <div class="client-logos">
+                                <img src="https://pngimg.com/d/google_PNG19644.png" alt="Client Logo Example" />
+                                <img src="https://pngimg.com/d/google_PNG19644.png" alt="Client Logo Example" />
+                                <img src="https://pngimg.com/d/google_PNG19644.png" alt="Client Logo Example" />
+                                <img src="https://pngimg.com/d/google_PNG19644.png" alt="Client Logo Example" />
+                                <img src="https://pngimg.com/d/google_PNG19644.png" alt="Client Logo Example" />
+                                <img src="https://pngimg.com/d/google_PNG19644.png" alt="Client Logo Example" />
+                                <img src="https://pngimg.com/d/google_PNG19644.png" alt="Client Logo Example" />
+                                <img src="https://pngimg.com/d/google_PNG19644.png" alt="Client Logo Example" />
+                                <img src="https://pngimg.com/d/google_PNG19644.png" alt="Client Logo Example" />
+                                <img src="https://pngimg.com/d/google_PNG19644.png" alt="Client Logo Example" />
+                                <img src="https://pngimg.com/d/google_PNG19644.png" alt="Client Logo Example" />
+                                <img src="https://pngimg.com/d/google_PNG19644.png" alt="Client Logo Example" />
+                                <img src="https://pngimg.com/d/google_PNG19644.png" alt="Client Logo Example" />
+                                <img src="https://pngimg.com/d/google_PNG19644.png" alt="Client Logo Example" />
+                                <img src="https://pngimg.com/d/google_PNG19644.png" alt="Client Logo Example" />
+                                <img src="https://pngimg.com/d/google_PNG19644.png" alt="Client Logo Example" />
+                                <img src="https://pngimg.com/d/google_PNG19644.png" alt="Client Logo Example" />
+                                <img src="https://pngimg.com/d/google_PNG19644.png" alt="Client Logo Example" />
+                                <img src="https://pngimg.com/d/google_PNG19644.png" alt="Client Logo Example" />
+                                <img src="https://pngimg.com/d/google_PNG19644.png" alt="Client Logo Example" />
+                                <img src="https://pngimg.com/d/google_PNG19644.png" alt="Client Logo Example" />
+                                <img src="https://pngimg.com/d/google_PNG19644.png" alt="Client Logo Example" />
+                                <img src="https://pngimg.com/d/google_PNG19644.png" alt="Client Logo Example" />
+                                <img src="https://pngimg.com/d/google_PNG19644.png" alt="Client Logo Example" />
+                                <img src="https://pngimg.com/d/google_PNG19644.png" alt="Client Logo Example" />
+                            </div>
+                        </div>
+
+                        <div class="client-column">
+                            <h4>Case Studies</h4>
+                            <p>
+                                See how ELEKS has helped its clients achieve their vision of digital innovation.
+                            </p>
+                            <div class="case-study">
+                                <img src="https://shaynakit.com/storage/assets/cover_project/HA3qe53lOjOESn72osDHZTtMO5onRLvVSKXQchDQ.png"
+                                    alt="Case Study Example" />
+                                <img src="https://shaynakit.com/storage/assets/cover_project/HA3qe53lOjOESn72osDHZTtMO5onRLvVSKXQchDQ.png"
+                                    alt="Case Study Example" />
+                                <img src="https://shaynakit.com/storage/assets/cover_project/HA3qe53lOjOESn72osDHZTtMO5onRLvVSKXQchDQ.png"
+                                    alt="Case Study Example" />
+                            </div>
+                        </div>
+
+                        <div class="client-column client-numbers">
+                            <div>
+                                <h3>20+</h3>
+                                <p>years of partnership with clients</p>
+                            </div>
+                            <div>
+                                <h3>120+</h3>
+                                <p>active client accounts</p>
+                            </div>
+                            <div>
+                                <h3>1000+</h3>
+                                <p>end-to-end projects</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">About us <span class="dropdown-indicator"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Blog <span class="dropdown-indicator"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">AI solutions advisor <span class="dropdown-indicator"></span></a>
+                </li>
+            </ul>
+
+            <div class="nav-right">
+                <a style="text-decoration: none;" href="../contact">
+                    <button type="button" class="btn-primary nav-contact-btn">
+                        <span>Contact us</span><i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </a>
+                <button class="search-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2" />
+                        <path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                </button>
+            </div>
+
+            <button class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+    <div class="mobile-menu">
+        <div class="mobile-menu-content">
+            <a href="#" class="mobile-nav-link">Services</a>
+            <a href="#" class="mobile-nav-link">Industries</a>
+            <a href="#" class="mobile-nav-link">Clients</a>
+            <a href="#" class="mobile-nav-link">About us</a>
+            <a href="#" class="mobile-nav-link">Blog</a>
+            <a href="#" class="mobile-nav-link">AI solutions advisor</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <main class="service-hero-container">
+        <section class="hero-wrapper custom-app-hero" aria-label="Custom Application Development">
+            <!-- Overview Panel -->
+            <article class="hero-panel active">
+                <div class="panel-blur-content overview-panel">
+                    <div class="content-to-show show">
+                        <div class="hero-flex-container">
+                            <!-- Left Content -->
+                            <div class="hero-left-content">
+                                <div class="panel-content">
+                                    <h1>Custom Application Development Services</h1>
+                                </div>
+                                <div class="progress-bound-content">
+                                    <div class="progress-aligned">
+                                        <p>
+                                            <strong>Accelerate your digital transformation</strong> with tailor-made
+                                            software solutions designed for your unique business challenges. Our expert
+                                            development team combines industry best practices, cutting-edge
+                                            technologies, and deep domain expertise to deliver:
+                                        </p>
+
+                                        <div class="cta-group">
+                                            <a href="../contact" class="cta-button primary">
+                                                <span>Get Free Consultation</span>
+                                                <i class="fa-solid fa-arrow-right"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Right Content - Statistics -->
+                            <div class="hero-right-content">
+                                <div class="stats-container">
+                                    <div class="stat-item">
+                                        <div class="stat-icon">
+                                            <i class="fa-solid fa-calendar-days"></i>
+                                        </div>
+                                        <div class="stat-content">
+                                            <div class="stat-number">10+</div>
+                                            <div class="stat-label">Years Experience</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="stat-item">
+                                        <div class="stat-icon">
+                                            <i class="fa-solid fa-users"></i>
+                                        </div>
+                                        <div class="stat-content">
+                                            <div class="stat-number">50+</div>
+                                            <div class="stat-label">Expert Developers</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="stat-item">
+                                        <div class="stat-icon">
+                                            <i class="fa-solid fa-rocket"></i>
+                                        </div>
+                                        <div class="stat-content">
+                                            <div class="stat-number">200+</div>
+                                            <div class="stat-label">Projects Delivered</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="stat-item">
+                                        <div class="stat-icon">
+                                            <i class="fa-solid fa-award"></i>
+                                        </div>
+                                        <div class="stat-content">
+                                            <div class="stat-number">98%</div>
+                                            <div class="stat-label">Client Satisfaction</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <!-- main section -->
+    <section class="service-page-section">
+        <aside class="service-sidebar">
+            <div class="service-sidebar-header">
+                <h3>What we offer</h3>
+            </div>
+            <div class="service-sidebar-content">
+                <ul>
+                    <li><a href="#what-we-offer" class="service-link active" data-target="what-we-offer">What we
+                            offer</a></li>
+                    <li><a href="#what-we-do" class="service-link" data-target="what-we-do">What we do</a></li>
+                    <li><a href="#customer-feedback" class="service-link" data-target="customer-feedback">Customer
+                            Feedback</a></li>
+                    <li><a href="#service-benefits" class="service-link" data-target="service-benefits">Service
+                            Benefits</a></li>
+                    <li><a href="#how-we-work" class="service-link" data-target="how-we-work">How we work</a></li>
+                    <li><a href="#case-studies" class="service-link" data-target="case-studies">Case studies</a></li>
+                </ul>
+            </div>
+            <div class="service-sidebar-footer">
+                <video playsinline autoplay muted loop>
+                    <source src="https://eleks.com/wp-content/uploads/pages-item-cta.webm" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="primary-link">
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <a href="#" style="margin-right: 4px;">Get in touch</a>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+        </aside>
+        <main class="service-main-content">
+            <!-- what we offer -->
+            <section class="service" id="what-we-offer">
+                <h3 class="section-main-title">What you can get with custom application development</h3>
+                <div class="service-badge">
+                    <i class="fa-solid fa-star"></i>
+                    <span class="badge-text">Premium Development Services</span>
+                </div>
+                <p class="section-main-desc">
+                    Premium Development Services
+                    We have extensive software development experience across various industries including insurance,
+                    finance, energy, logistics, government and others. Our specialized technology expertise includes
+                    proprietary platforms for software development in healthcare, energy, data science, and compliance
+                    automation. We provide scalable solutions that seamlessly integrate with your existing software
+                    ecosystem.
+                </p>
+                <p class="section-main-desc">
+                    We foster trusted relationships with our clients and serve as technology partners. Our extensive
+                    expertise in technologies like AI, data analytics, machine learning, cybersecurity, and cloud
+                    consulting allows us to design solutions that not only address your current needs but also
+                    future-proof your business against emerging challenges and opportunities.
+                </p>
+            </section>
+
+            <!-- what we  do -->
+            <section class="service" id="what-we-do">
+                <h3 class="section-main-title">End-to-end application development services</h3>
+                <p class="section-main-desc">
+                    We have extensive software development experience across various industries including insurance,
+                    finance, energy, logistics, government and others. Our specialized technology expertise includes
+                    proprietary platforms for software development in healthcare, energy, data science, and compliance
+                    automation. We provide scalable solutions that seamlessly integrate with your existing software
+                    ecosystem.
+                </p>
+                <div class="service-swiper-main">
+                    <div class="header">
+                        <h4>WHAT WE DO</h4>
+                        <div class="what-we-do-nav">
+                            <button class="nav-btn prev">
+                                <i class="fa-solid fa-arrow-left"></i>
+                            </button>
+                            <button class="nav-btn next">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="swiper what-we-do-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide service-card">
+                                <div class="service-icon">
+                                    <i class="fa-solid fa-desktop"></i>
+                                </div>
+                                <h3>Desktop software</h3>
+                                <p>
+                                    We provide full-cycle software development services with desktop app integration for
+                                    a wide variety of operating systems, including Windows, macOS and Linux. Our
+                                    development team offers tailored support at every stage of your development process,
+                                    helping you deliver your end-to-end custom software project on time, on budget and
+                                    within scope.
+                                </p>
+                                <div class="service-details">
+                                    <h4>Key Features & Technologies</h4>
+                                    <ul>
+                                        <li>Cross-platform development (Windows, macOS, Linux)</li>
+                                        <li>Native application development</li>
+                                        <li>Desktop app integration services</li>
+                                        <li>Performance optimization</li>
+                                        <li>Security implementation</li>
+                                        <li>Automated testing & deployment</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="swiper-slide service-card">
+                                <div class="service-icon">
+                                    <i class="fa-solid fa-desktop"></i>
+                                </div>
+                                <h3>Desktop software</h3>
+                                <p>
+                                    We provide full-cycle software development services with desktop app integration for
+                                    a wide variety of operating systems, including Windows, macOS and Linux. Our
+                                    development team offers tailored support at every stage of your development process,
+                                    helping you deliver your end-to-end custom software project on time, on budget and
+                                    within scope.
+                                </p>
+                                <div class="service-details">
+                                    <h4>Key Features & Technologies</h4>
+                                    <ul>
+                                        <li>Cross-platform development (Windows, macOS, Linux)</li>
+                                        <li>Native application development</li>
+                                        <li>Desktop app integration services</li>
+                                        <li>Performance optimization</li>
+                                        <li>Security implementation</li>
+                                        <li>Automated testing & deployment</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="swiper-slide service-card">
+                                <div class="service-icon">
+                                    <i class="fa-solid fa-desktop"></i>
+                                </div>
+                                <h3>Desktop software</h3>
+                                <p>
+                                    We provide full-cycle software development services with desktop app integration for
+                                    a wide variety of operating systems, including Windows, macOS and Linux. Our
+                                    development team offers tailored support at every stage of your development process,
+                                    helping you deliver your end-to-end custom software project on time, on budget and
+                                    within scope.
+                                </p>
+                                <div class="service-details">
+                                    <h4>Key Features & Technologies</h4>
+                                    <ul>
+                                        <li>Cross-platform development (Windows, macOS, Linux)</li>
+                                        <li>Native application development</li>
+                                        <li>Desktop app integration services</li>
+                                        <li>Performance optimization</li>
+                                        <li>Security implementation</li>
+                                        <li>Automated testing & deployment</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="swiper-slide service-card">
+                                <div class="service-icon">
+                                    <i class="fa-solid fa-desktop"></i>
+                                </div>
+                                <h3>Desktop software</h3>
+                                <p>
+                                    We provide full-cycle software development services with desktop app integration for
+                                    a wide variety of operating systems, including Windows, macOS and Linux. Our
+                                    development team offers tailored support at every stage of your development process,
+                                    helping you deliver your end-to-end custom software project on time, on budget and
+                                    within scope.
+                                </p>
+                                <div class="service-details">
+                                    <h4>Key Features & Technologies</h4>
+                                    <ul>
+                                        <li>Cross-platform development (Windows, macOS, Linux)</li>
+                                        <li>Native application development</li>
+                                        <li>Desktop app integration services</li>
+                                        <li>Performance optimization</li>
+                                        <li>Security implementation</li>
+                                        <li>Automated testing & deployment</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Customer Feedback Section -->
+            <section class="service" id="customer-feedback">
+                <div class="left-section">
+                    <h2 class="section-title">Customer feedback</h2>
+                    <div class="swiper-container customer-feedback-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide feedback-slide">
+                                <blockquote class="feedback-text">
+                                    <i class="fa-solid fa-quote-left"></i> Right from the start, we really liked ELEKS'
+                                    commitment and engagement. They came
+                                    to us with their best people to try to understand our context, our business idea,
+                                    and developed the first prototype with us. They were very professional and very
+                                    customer oriented. I think, without ELEKS it probably would not have been possible
+                                    to have such a successful product in such a short period of time.
+                                </blockquote>
+                                <div class="feedback-author">
+                                    <div class="author-info-section">
+                                        <img src="https://eleks.com/wp-content/uploads/caroline-min.jpg"
+                                            alt="Caroline Aumeran" class="author-photo">
+                                        <div class="author-info">
+                                            <p class="author-name">Caroline Aumeran</p>
+                                            <p class="author-role">Head of Product Development, appygasGRTgaz</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="company-logo">
+                                        <img src="https://eleks.com/wp-content/uploads/grt-gaz-logo-white.svg"
+                                            alt="Caroline Aumeran" class="company-logo">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide feedback-slide">
+                                <blockquote class="feedback-text">
+                                    <i class="fa-solid fa-quote-left"></i> Right from the start, we really liked ELEKS'
+                                    commitment and engagement. They came
+                                    to us with their best people to try to understand our context, our business idea,
+                                    and developed the first prototype with us. They were very professional and very
+                                    customer oriented. I think, without ELEKS it probably would not have been possible
+                                    to have such a successful product in such a short period of time.
+                                </blockquote>
+                                <div class="feedback-author">
+                                    <div class="author-info-section">
+                                        <img src="https://eleks.com/wp-content/uploads/caroline-min.jpg"
+                                            alt="Caroline Aumeran" class="author-photo">
+                                        <div class="author-info">
+                                            <p class="author-name">Caroline Aumeran</p>
+                                            <p class="author-role">Head of Product Development, appygasGRTgaz</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="company-logo">
+                                        <img src="https://eleks.com/wp-content/uploads/grt-gaz-logo-white.svg"
+                                            alt="Caroline Aumeran" class="company-logo">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feedback-swiper-nav">
+                            <button class="nav-btn prev">
+                                <i class="fa-solid fa-arrow-left"></i>
+                            </button>
+                            <button class="nav-btn next">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-section">
+                    <video src="https://eleks.com/wp-content/uploads/cta-video-big.webm" playsinline autoplay muted
+                        loop>
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="cta-content">
+                        <h3>Create a custom application that adds value and boosts profits</h3>
+                        <a style="text-decoration: none;" href="../contact">
+                            <button type="button" class="btn-primary nav-contact-btn">
+                                <span>Contact us</span><i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- service section -->
+            <section class="service" id="service-benefits">
+                <h3 class="section-main-title">Service Benefits & Advantages</h3>
+                <p class="section-main-desc">
+                    Our custom application development services offer numerous benefits including increased operational
+                    efficiency, reduced costs, improved user experience, and enhanced security. We focus on creating
+                    solutions that provide measurable ROI and long-term value for your business.
+                </p>
+                <p class="section-main-desc">
+                    With our agile development methodology, you'll receive regular updates and have full visibility into
+                    the development process. Our solutions are built with scalability in mind, ensuring they can grow
+                    with your business needs.
+                </p>
+            </section>
+
+            <!-- how we work section -->
+            <section class="service" id="how-we-work">
+                <h3 class="section-main-title">How We Work - Our Development Process</h3>
+                <p class="section-main-desc">
+                    Our development process follows a proven methodology that ensures successful project delivery. We
+                    begin with comprehensive requirements gathering and analysis, followed by detailed planning and
+                    architecture design. Our agile approach allows for iterative development with regular client
+                    feedback and testing.
+                </p>
+                <p class="section-main-desc">
+                    We maintain transparent communication throughout the project lifecycle, providing regular updates
+                    and demos. Our quality assurance process ensures that every application meets the highest standards
+                    of performance, security, and user experience before deployment.
+                </p>
+            </section>
+
+            <!-- case study section -->
+            <section class="service" id="case-studies">
+                <h3 class="section-main-title">Case Studies & Success Stories</h3>
+                <p class="section-main-desc">
+                    Explore our portfolio of successful custom application development projects. Each case study
+                    demonstrates our ability to solve complex business challenges through innovative technology
+                    solutions. From enterprise applications to specialized industry solutions, our track record speaks
+                    for itself.
+                </p>
+                <p class="section-main-desc">
+                    Our case studies showcase real-world applications that have delivered significant business value,
+                    including improved efficiency, cost savings, enhanced customer experience, and competitive
+                    advantages for our clients across various industries.
+                </p>
+            </section>
+
+        </main>
+    </section>
+
+    <!-- FOOTER  -->
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Brand and Contact Information -->
+                <div class="footer-brand">
+                    <a href="/" class="footer-logo" aria-label="ELEKS Homepage">Quba</a>
+
+                    <div class="office-info">
+                        <h3>QUBA office near you:</h3>
+                        <p>
+                            <a href="#" aria-label="Ajman Chamber of Commerce location">Ajman Chamber of
+                                Commerce</a>,<br>
+                            Sheikh Rashid bin Hameed<br>
+                            Street, Al Nakheel 2, Ajman City
+                        </p>
+                    </div>
+
+                    <div class="company-details">
+                        <p><strong>Quba, Inc.</strong></p>
+                        <p>CAGE/NCAGE: 7W6F0</p>
+                        <p>SAM Unique Entity ID:<br>NQ9PRQMMSJ64</p>
+                    </div>
+                </div>
+
+                <!-- Services Column -->
+                <div class="footer-column">
+                    <h2>Services</h2>
+                    <nav aria-label="Services navigation">
+                        <ul class="footer-links">
+                            <li><a href="#">Engineering</a></li>
+                            <li><a href="#">PoC development</a></li>
+                            <li><a href="#">Application development</a></li>
+                            <li><a href="#">Product-oriented delivery</a></li>
+                            <li><a href="#">Enterprise applications</a></li>
+                            <li><a href="#">Legacy software modernization</a></li>
+                            <li><a href="#">Cloud computing</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- Data & AI Column -->
+                <div class="footer-column">
+                    <h2>Data & AI</h2>
+                    <nav aria-label="Data and AI services navigation">
+                        <ul class="footer-links">
+                            <li><a href="#">Data science</a></li>
+                            <li><a href=" #">Data engineering</a></li>
+                            <li><a href="#">Artificial intelligence</a></li>
+                            <li><a href="#">Generative AI</a></li>
+                            <li><a href="#">Machine learning</a></li>
+                            <li><a href="#">Conversational AI</a></li>
+                            <li><a href="#">Intelligent automation</a></li>
+                            <li><a href="#">MLOps</a></li>
+                            <li><a href="#">Business intelligence</a></li>
+                            <li><a href="#">Data platforms</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- Expertise Column -->
+                <div class="footer-column">
+                    <h2>Expertise</h2>
+                    <nav aria-label="Expertise areas navigation">
+                        <ul class="footer-links">
+                            <li><a href="#">DevOps</a></li>
+                            <li><a href="#">VR/AR/MR</a></li>
+                            <li><a href="#">Internet of Things</a></li>
+                            <li><a href="#">Market research</a></li>
+                            <li><a href="#">Customer experience</a></li>
+                            <li><a href="#">Digital enterprise</a></li>
+                            <li><a href="#">Nearshore development</a></li>
+                            <li><a href="#">UX consulting</a></li>
+                            <li><a href="#">Software development</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- Industries and Company Columns -->
+                <div class="footer-column">
+                    <h2>Industries</h2>
+                    <nav aria-label="Industries navigation">
+                        <ul class="footer-links">
+                            <li><a href="#">Fintech</a></li>
+                            <li><a href="#">Healthcare</a></li>
+                            <li><a href="#">Energy</a></li>
+                            <li><a href="#">Government</a></li>
+                            <li><a href="#">Insurance</a></li>
+                            <li><a href="#">Retail</a></li>
+                            <li><a href="#">Logistics</a></li>
+                            <li><a href="#">Automotive</a></li>
+                            <li><a href="#">Agriculture</a></li>
+                            <li><a href="#">Media & Entertainment</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-left">
+                    <!-- Social Media Links -->
+                    <div class="social-links">
+                        <a href="#" aria-label="Follow ELEKS on Facebook" rel="noopener noreferrer" target="_blank">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Follow ELEKS on X (Twitter)" rel="noopener noreferrer" target="_blank">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Follow ELEKS on LinkedIn" rel="noopener noreferrer" target="_blank">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Legal Links -->
+                    <nav class="footer-legal-links" aria-label="Legal navigation">
+                        <a href="/terms-of-use">Terms of Use</a>
+                        <a href="/privacy-policy">Privacy policy</a>
+                        <a href="/sitemap">Site Map</a>
+                    </nav>
+                </div>
+
+                <div class="footer-bottom-right">
+                    <!-- Copyright -->
+                    <div class="copyright">
+                        © 1991-2025 QUBA, All rights reserved
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../assets/script/navbar.js"></script>
+    <script src="../../assets/script/service.js"></script>
+</body>
+
+</html>
