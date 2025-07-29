@@ -292,12 +292,12 @@
 
 /* Main Content Wrapper */
 .service-page-section {
-    padding: 2rem 1rem;
+    padding: 2rem 0rem;
     display: flex;
     flex-direction: row;
     gap: 1.5rem;
-    max-width: 1280px;
-    margin: auto;
+    max-width: 95vw;
+    margin: 0 auto;
 }
 
 /* sidebar */
@@ -555,7 +555,7 @@
     font-size: 1.25rem;
     font-weight: 600;
     color: #333;
-    margin-bottom: 0.7rem;
+    margin-bottom: 2rem;
     margin-top: 0;
 }
 
@@ -621,13 +621,6 @@
     overflow-x: hidden;
 }
 
-/* Section Title */
-.service-main-content #customer-feedback .section-title {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    color: #222;
-}
-
 /* Swiper Slides */
 .service-main-content #customer-feedback .feedback-swiper {
     position: relative;
@@ -638,6 +631,7 @@
     line-height: 1.6;
     color: #444;
     margin-bottom: 25px;
+    margin-top: 1rem;
 }
 
 .service-main-content #customer-feedback .feedback-text i {
@@ -754,23 +748,178 @@
     font-weight: 400;
 }
 
-/* @media screen and (max-width: 768px) {
-    .service-hero-container .hero-flex-container {
-        flex-direction: column;
-        align-items: center;
-    }
+.service-main-content #service-benefits .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem 1.5rem;
+    margin-top: 1rem;
+}
 
-    .service-hero-container .progress-bound-content {
-        max-width: 100%;
-        margin-left: 0;
-    }
+/* individual card */
+.service-main-content #service-benefits .benefit-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
 
-    .service-hero-container .panel-content {
-        max-width: 100%;
-    }
-} */
+.service-main-content #service-benefits .benefit-number {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #006aff;
+}
 
-/* Base (desktop‑first) styles already in place… */
+.service-main-content #service-benefits .benefit-label {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.service-main-content #service-benefits .benefit-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #444;
+}
+
+.service-main-content #case-studies {
+    padding: 4rem 1rem;
+    margin: 0 auto;
+    color: #1a1a1a;
+    background: #fff;
+    font-family: sans-serif;
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    row-gap: 2rem;
+}
+
+.service-main-content #case-studies .cs-logo-swiper {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    overflow-x: auto;
+    padding: 0.5rem;
+    background: #f9f9f9;
+    border-radius: 100px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.service-main-content #case-studies .cs-logo-item {
+    flex: 0 0 auto;
+    background: transparent;
+    border: none;
+    padding: 0.5rem 0;
+    border-radius: 50px;
+    transition: background 0.3s;
+    cursor: pointer;
+    max-width: 200px;
+    overflow: hidden;
+}
+
+.service-main-content #case-studies .cs-logo-item.active {
+    background: #1E1D28;
+}
+
+.service-main-content #case-studies .cs-logo-item.active:hover {
+    background: #1E1D28;
+}
+
+.service-main-content #case-studies .cs-logo-item:hover {
+    background: #E9EDF3;
+}
+
+.service-main-content #case-studies .cs-logo-item img {
+    height: 50px;
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+}
+
+.service-main-content #case-studies .cs-feature-swiper {
+    width: 100%;
+}
+
+.service-main-content #case-studies .cs-feature {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.service-main-content #case-studies .cs-media {
+    position: relative;
+    height: 300px;
+}
+
+.service-main-content #case-studies .cs-media video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.service-main-content #case-studies .cs-duration {
+    position: absolute;
+    bottom: 0.8rem;
+    right: 0.5rem;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 0.25rem 0.5rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.service-main-content #case-studies .cs-duration i {
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+.service-main-content #case-studies .cs-details {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.service-main-content #case-studies .cs-details h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2.2rem;
+}
+
+.service-main-content #case-studies .cs-details p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.service-main-content #case-studies .cs-details .primary-link {
+    color: #006aff;
+}
+
+.service-main-content #case-studies .cs-details .primary-link a {
+    color: #006aff;
+    margin-right: 5px;
+}
+
+.service-main-content #case-studies .cs-cta {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background: #f0f4ff;
+    color: #1a1a1a;
+    text-decoration: none;
+    border-radius: 40px;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+}
+
+.service-main-content #case-studies .cs-cta:hover {
+    background: #d7e0fd;
+}
 
 /* Tablets & small laptops */
 @media (max-width: 1024px) {
@@ -812,13 +961,25 @@
     }
 }
 
-@media screen and (max-width: 968px) {
+@media screen and (max-width: 992px) {
     .service-page-section .service-sidebar {
         display: none;
     }
 
+    .service-main-content #service-benefits .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .service-page-section .service-main-content {
         width: 100%;
+    }
+
+    .service-main-content #case-studies .cs-feature {
+        grid-template-columns: 1fr;
+    }
+
+    .service-main-content #case-studies .cs-logo-swiper {
+        justify-content: center;
     }
 }
 
@@ -882,6 +1043,19 @@
     .service-main-content #customer-feedback .right-section video {
         width: 40%;
         height: 150px;
+    }
+
+    .service-main-content #service-benefits .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .service-main-content #service-benefits .benefits-title {
+        font-size: clamp(1.5rem, 5vw, 2.25rem);
+    }
+
+    .service-main-content #case-studies .cs-details {
+        gap: 1rem;
     }
 }
 
@@ -947,5 +1121,11 @@
 
     .service-main-content #customer-feedback .cta-content {
         padding: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .service-main-content #case-studies {
+        padding: 2rem 0.5rem;
     }
 }

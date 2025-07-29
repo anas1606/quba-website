@@ -71,4 +71,33 @@ document.addEventListener('DOMContentLoaded', () => {
             targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
     });
+
+    const featureSwiper = new Swiper(".cs-feature-swiper", {
+        loop: false,
+        slidesPerView: 1,
+        effect: "slide",
+        duration: 500,
+        fadeEffect: { crossFade: true },
+        allowTouchMove: false, // only control via logo clicks
+    });
+
+    new Swiper(".cs-logo-swiper", {
+        slidesPerView: 4,
+        spaceBetween: 16,
+        breakpoints: {
+            768: { slidesPerView: 4 },
+            480: { slidesPerView: 2.5 },
+            320: { slidesPerView: 1.5 },
+        },
+    });
+
+    document.querySelectorAll(".cs-logo-item").forEach((item, index) => {
+        item.addEventListener("click", () => {
+            console.log(`Logo clicked: ${item.dataset.feature}`);
+            featureSwiper.slideTo(index);
+            document.querySelectorAll(".cs-logo-item").forEach(el => el.classList.remove("active"));
+            item.classList.add("active");
+        });
+    });
+
 });
