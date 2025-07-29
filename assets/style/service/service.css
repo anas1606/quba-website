@@ -606,8 +606,10 @@
     font-weight: bold;
 }
 
-/* cdcs */
-/* Container & Layout */
+.service-main-content #latest-updates .expert-insights {
+    padding: 0;
+}
+
 .service-main-content #customer-feedback {
     display: flex;
     flex-direction: row;
