@@ -1,7 +1,7 @@
 /* hero section home page */
 .overview-panel {
   position: relative;
-  background-image: url("../../images/overview.jpg");
+  background-image: url("../../images/quba-banner.avif");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -20,7 +20,7 @@
 
 .data-ai-panel {
   position: relative;
-  background-image: url("../../images/DATA.jpg");
+  background-image: url("../../images/quba-AI-Banner.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -39,7 +39,7 @@
 
 .fintech-panel {
   position: relative;
-  background-image: url("../../images/fintech.jpg");
+  background-image: url("../../images/quba-bannerFintech.avif");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -58,7 +58,7 @@
 
 .logistics-panel {
   position: relative;
-  background-image: url("../../images/energy.jpg");
+  background-image: url("../../images/quba-banner-logistics.avif");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
