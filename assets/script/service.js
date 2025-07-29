@@ -13,13 +13,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 slidesPerView: 3,
                 spaceBetween: 24
             },
-            768: {
+            480: {
                 slidesPerView: 2,
                 spaceBetween: 24
             },
-            480: {
+            0: {
                 slidesPerView: 1,
-                spaceBetween: 24
+                spaceBetween: 0
             }
         }
     });

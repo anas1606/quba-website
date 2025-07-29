@@ -732,7 +732,7 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: fit-content;
     padding: 10px;
 }
 
@@ -754,7 +754,7 @@
     font-weight: 400;
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
     .service-hero-container .hero-flex-container {
         flex-direction: column;
         align-items: center;
@@ -767,5 +767,185 @@
 
     .service-hero-container .panel-content {
         max-width: 100%;
+    }
+} */
+
+/* Base (desktop‑first) styles already in place… */
+
+/* Tablets & small laptops */
+@media (max-width: 1024px) {
+    .service-hero-container .hero-flex-container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .service-hero-container .hero-left-content,
+    .service-hero-container .hero-right-content {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .service-hero-container .hero-right-content {
+        padding-bottom: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .service-hero-container .stats-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        max-width: 100%;
+    }
+
+    .service-main-content #what-we-do .service-swiper-main .service-card {
+        max-width: 100%;
+    }
+
+    .service-main-content #customer-feedback .left-section {
+        padding-right: 1rem;
+    }
+
+    .service-page-section .service-main-content .section-main-title,
+    .service-page-section .service-main-content .section-main-desc {
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 968px) {
+    .service-page-section .service-sidebar {
+        display: none;
+    }
+
+    .service-page-section .service-main-content {
+        width: 100%;
+    }
+}
+
+/* Portrait tablets & large phones */
+@media (max-width: 768px) {
+    .service-hero-container .panel-content {
+        padding: 0rem;
+        margin-bottom: 10px;
+        margin-left: 0;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .service-hero-container .progress-aligned {
+        padding: 0rem;
+        margin-bottom: 1.5rem;
+        margin-left: 0;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .service-hero-container .content-to-show {
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    .service-hero-container .panel-content h1 {
+        font-size: clamp(1.75rem, 5vw, 2.5rem);
+    }
+
+    .service-hero-container .progress-bound-content {
+        margin: 0 auto;
+        max-width: 90%;
+    }
+
+    .service-hero-container .cta-group {
+        justify-content: center;
+    }
+
+    .service-hero-container .cta-button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .service-main-content #customer-feedback {
+        flex-direction: column;
+    }
+
+    .service-main-content #customer-feedback .left-section {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .service-main-content #customer-feedback .right-section {
+        flex-direction: row;
+        gap: 10px;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .service-main-content #customer-feedback .right-section video {
+        width: 40%;
+        height: 150px;
+    }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+    .service-hero-container {
+        margin-top: 5px;
+    }
+
+    .service-hero-container .panel-blur-content {
+        padding: 0.5rem;
+    }
+
+    .service-hero-container .hero-wrapper {
+        padding: 0 10px;
+        height: auto;
+    }
+
+    .service-hero-container .hero-flex-container {
+        gap: 10px;
+    }
+
+    .service-hero-container .stat-item {
+        padding: 12px;
+        gap: 8px;
+    }
+
+    .service-hero-container .stat-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 16px;
+    }
+
+    .service-hero-container .stat-number {
+        font-size: 1.25rem;
+    }
+
+    .service-hero-container .stat-label {
+        font-size: 0.75rem;
+    }
+
+    .service-page-section .service-main-content {
+        padding: 0;
+    }
+
+    .service-page-section .service-main-content .section-main-title {
+        max-width: 100%;
+        font-size: 2rem;
+    }
+
+    .service-page-section .service-main-content #what-we-offer .service-badge .badge-text {
+        font-size: 0.7rem;
+    }
+
+    .service-page-section .service-main-content .section-main-desc {
+        font-size: 0.9rem;
+        max-width: 100%;
+    }
+
+    .service-main-content #what-we-do .service-swiper-main .service-card {
+        min-height: auto;
+    }
+
+    .service-main-content #customer-feedback .cta-content {
+        padding: 0;
     }
 }
