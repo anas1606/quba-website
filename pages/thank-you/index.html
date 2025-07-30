@@ -4,11 +4,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Thank You</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <title>Thank You | FuturoTech</title>
+    <!-- Futuristic Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Unbounded:wght@300;600&display=swap"
+        rel="stylesheet">
     <style>
+        /* Reset */
         * {
             margin: 0;
             padding: 0;
@@ -16,81 +18,118 @@
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f0f4f8;
+            background: #0B0E11;
+            color: #E2E8F0;
+            font-family: 'Unbounded', sans-serif;
+            min-height: 100vh;
             display: flex;
-            align-items: center;
             justify-content: center;
-            height: 100vh;
+            align-items: center;
+        }
+
+        .container {
             text-align: center;
-            padding: 20px;
+            max-width: 600px;
+            padding: 40px 20px;
+            position: relative;
         }
 
-        .thank-you-box {
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
-            max-width: 500px;
+        /* 3D Grid Background */
+        .grid-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            animation: fadeIn 1s ease-in-out;
+            height: 100%;
+            background:
+                radial-gradient(circle at 50% 50%, rgba(14, 17, 21, 0.8), transparent 70%),
+                repeating-linear-gradient(0deg, transparent, transparent 49%, rgba(14, 17, 21, 0.3) 50%, rgba(14, 17, 21, 0.3) 51%, transparent 52%),
+                repeating-linear-gradient(90deg, transparent, transparent 49%, rgba(14, 17, 21, 0.3) 50%, rgba(14, 17, 21, 0.3) 51%, transparent 52%);
+            background-size: 100% 100%, 40px 40px, 40px 40px;
+            transform: perspective(600px) rotateX(60deg) translateY(30%);
+            z-index: -1;
         }
 
-        .thank-you-box h1 {
-            font-size: 32px;
-            color: #2c3e50;
-            margin-bottom: 10px;
+        /* Hero Image */
+        .hero {
+            width: 140px;
+            margin: 0 auto 30px;
+            animation: float 4s ease-in-out infinite;
         }
 
-        .thank-you-box p {
-            font-size: 18px;
-            color: #555;
-            margin-bottom: 30px;
-        }
+        @keyframes float {
 
-        .thank-you-box a {
-            display: inline-block;
-            background-color: #007bff;
-            color: white;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 6px;
-            transition: background 0.3s ease;
-        }
-
-        .thank-you-box a:hover {
-            background-color: #0056b3;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
+            0%,
+            100% {
                 transform: translateY(0);
             }
+
+            50% {
+                transform: translateY(-10px);
+            }
         }
 
-        @media (max-width: 480px) {
-            .thank-you-box h1 {
-                font-size: 24px;
-            }
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            font-size: 2.5rem;
+            background: linear-gradient(45deg, #00FFCC, #FF007F);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
+        }
 
-            .thank-you-box p {
-                font-size: 16px;
-            }
+        p {
+            font-size: 1rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            background: linear-gradient(45deg, #00FFCC, #FF007F);
+            color: #0B0E11;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: transform .3s;
+        }
+
+        .btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #1E90FF;
+            mix-blend-mode: screen;
+            opacity: 0;
+            transition: opacity .3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+        }
+
+        .btn:hover:before {
+            opacity: 0.3;
         }
     </style>
 </head>
 
 <body>
-    <div class="thank-you-box">
+    <div class="container">
+        <div class="grid-bg"></div>
+        <img src="https://via.placeholder.com/140x140.png?text=✓" alt="Success" class="hero" />
         <h1>Thank You!</h1>
-        <p>Your message has been sent successfully. We'll get back to you soon.</p>
-        <a href="index.html">Back to Home</a>
+        <p>Your message is received in the data streams. FuturoTech’s AI unit will transmit a response within 24 hours.
+        </p>
+        <button class="btn" onclick="location.href='index.html'">Return to Home</button>
     </div>
 </body>
 
