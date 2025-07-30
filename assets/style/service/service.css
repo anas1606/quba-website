@@ -743,6 +743,10 @@
     padding: 20px 0px;
 }
 
+.service-main-content #customer-feedback .cta-content .nav-contact-btn:hover i {
+    transform: translateX(-143px) rotate(-45deg);
+}
+
 .service-main-content #customer-feedback .cta-content h3 {
     font-size: 16px;
     margin-bottom: 15px;
