@@ -65,7 +65,7 @@
   z-index: 1;
 }
 
-.energy-panel::before {
+.logistics-panel::before {
   content: "";
   position: absolute;
   inset: 0;

@@ -59,6 +59,41 @@ body {
   font-size: 12px;
 }
 
+/* Logo Styling */
+.nav-logo .logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.nav-logo .logo-link img {
+    height: 80px;
+    width: 80px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0px;
+    transition: transform 0.3s ease;
+}
+
+.nav-logo .logo-link img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Logo */
+@media (max-width: 768px) {
+    .nav-logo .logo-link img {
+        height: 65px;
+        width: 65px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-logo .logo-link img {
+        height: 50px;
+        width: 50px;
+    }
+}
+
 /* Navigation Menu */
 .navbar .nav-menu {
   display: flex;
