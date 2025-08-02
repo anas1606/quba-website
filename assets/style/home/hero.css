@@ -74,6 +74,64 @@
   z-index: -1;
   /* keep it behind content */
 }
+
+.product-delivery-panel {
+  position: relative;
+  background-image: url("../../images/quba-infotech-product-delivery.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.product-delivery-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  /* adjust opacity here */
+  z-index: -1;
+  /* keep it behind content */
+}
+
+.mvp-development-panel {
+  position: relative;
+  background-image: url("../../images/mvp-development.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.mvp-development-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  /* adjust opacity here */
+  z-index: -1;
+  /* keep it behind content */
+}
+
+.application-development-panel {
+  position: relative;
+  background-image: url("../../images/quba-infotech-application-development.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.application-development-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  /* adjust opacity here */
+  z-index: -1;
+  /* keep it behind content */
+}
+
 .hero-container{
   padding: 20px 0;
 }
