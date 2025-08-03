@@ -125,7 +125,7 @@
 .container-fluid.highlight-section .client-logo-carousel {
   overflow: hidden;
   background: #1e1d28;
-  padding: 120px 0;
+  padding: 140px 0;
 }
 
 .container-fluid.highlight-section .client-logo-carousel .carousel-track {
@@ -136,11 +136,13 @@
 
 .container-fluid.highlight-section .client-logo-carousel .carousel-item {
   flex: 0 0 auto;
-  padding: 0 80px;
+  padding: 0 100px;
 }
 
 .container-fluid.highlight-section .client-logo-carousel .carousel-item img {
-  height: 50px;
+  height: 150px;
+  width: auto;
+  max-width: 200px;
   /* adjust logo size */
   display: block;
   opacity: 0.8;

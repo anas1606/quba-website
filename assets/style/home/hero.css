@@ -132,6 +132,44 @@
   /* keep it behind content */
 }
 
+.mobile-application-development-panel {
+  position: relative;
+  background-image: url("../../images/quba-infotech-mobile-applications-development.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.mobile-application-development-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  /* adjust opacity here */
+  z-index: -1;
+  /* keep it behind content */
+}
+
+.cloud-application-development-panel {
+  position: relative;
+  background-image: url("../../images/quba-infotech-cloud-development.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.cloud-application-development-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  /* adjust opacity here */
+  z-index: -1;
+  /* keep it behind content */
+}
+
 .hero-container{
   padding: 20px 0;
 }
