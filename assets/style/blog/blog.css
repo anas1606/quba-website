@@ -231,7 +231,7 @@
     border-radius: 2px;
 }
 
-.blog-page-section .blog-main-content #what-is-rag .blog-badge {
+.blog-page-section .blog-main-content .blog-badge {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
@@ -245,17 +245,17 @@
     width: fit-content;
 }
 
-.blog-page-section .blog-main-content #what-is-rag .blog-badge:hover {
+.blog-page-section .blog-main-content .blog-badge:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(0, 106, 255, 0.4);
 }
 
-.blog-page-section .blog-main-content #what-is-rag .blog-badge i {
+.blog-page-section .blog-main-content .blog-badge i {
     font-size: 16px;
     color: #FFD700;
 }
 
-.blog-page-section .blog-main-content #what-is-rag .blog-badge .badge-text {
+.blog-page-section .blog-main-content .blog-badge .badge-text {
     font-size: 0.875rem;
     font-weight: 600;
     letter-spacing: 0.5px;
@@ -271,6 +271,177 @@
 
 .blog-main-content #latest-updates .expert-insights {
     padding: 0;
+}
+
+/*  key takeaways */
+.blog-page-section .blog-main-content #key-takeaways {
+    width: 80%;
+    background-color: #1E1D28;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.blog-page-section .blog-main-content #key-takeaways .main-title {
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+}
+
+.blog-page-section .blog-main-content #key-takeaways .key-list-main {
+    display: flex;
+    gap: 1rem;
+}
+
+.blog-page-section .blog-main-content #key-takeaways .key-list-main .key-list-icon span {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+}
+
+.blog-page-section .blog-main-content #key-takeaways .key-list-main .key-list-content {
+    color: white;
+    font-size: 1rem;
+    font-weight: 400
+}
+
+.blog-page-section .blog-main-content .blog .custom-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+    max-width: 80%;
+}
+
+.blog-page-section .blog-main-content .blog .custom-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #333;
+}
+
+.blog-page-section .blog-main-content .blog .custom-list li:nth-last-child(1) {
+    margin-bottom: 0;
+}
+
+.blog-page-section .blog-main-content .blog .custom-list li::before {
+    content: '';
+    position: absolute;
+    top: 0.5rem;
+    left: 0;
+    width: 9px;
+    height: 9px;
+    background-color: #0047FF;
+    /* same blue as the image */
+    border-radius: 50%;
+}
+
+.blog-page-section .blog-main-content .blog .custom-list li strong {
+    font-weight: 600;
+    display: inline-block;
+    color: #000;
+}
+
+.blog-page-section .blog-main-content #blog-author {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: flex-start;
+    background-color: #F8F8F9;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.blog-page-section .blog-main-content #blog-author .author-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.blog-page-section .blog-main-content #blog-author .author-images img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #0047FF;
+}
+
+.blog-page-section .blog-main-content #blog-author .author-text p {
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.blog-page-section .blog-main-content #blog-author .tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    max-width: 500px;
+}
+
+.blog-page-section .blog-main-content #blog-author .tag {
+    padding: 6px 12px;
+    border: 1px solid #d1d1d1;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #111;
+    background-color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.blog-page-section .blog-main-content #blog-author .tag:hover {
+    background-color: #0047FF;
+    color: #fff;
+    border: 1px solid #0047FF;
+}
+
+.blog-page-section .blog-main-content #blog-author .dates p {
+    font-size: 14px;
+    color: #444;
+    margin: 0;
+    margin-bottom: 0.5rem;
+}
+
+.blog-page-section .blog-main-content #blog-author .dates strong {
+    display: block;
+    margin-top: 2px;
+    color: #000;
+}
+
+.blog-page-section .blog-main-content #blog-author .author-social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.blog-page-section .blog-main-content #blog-author .author-social-links a {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #1a1a1a;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.blog-page-section .blog-main-content #blog-author .author-social-links a:hover {
+    background: #0047FF;
 }
 
 @media (max-width: 1024px) {
@@ -290,6 +461,10 @@
     .blog-page-section .blog-main-content {
         width: 100%;
     }
+
+    .blog-page-section .blog-main-content #key-takeaways {
+        width: 100%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -302,13 +477,48 @@
         font-size: 2rem;
     }
 
-    .blog-page-section .blog-main-content #what-is-rag .blog-badge .badge-text {
+    .blog-page-section .blog-main-content .blog-badge .badge-text {
         font-size: 0.7rem;
     }
 
     .blog-page-section .blog-main-content .section-main-desc {
         font-size: 0.9rem;
         max-width: 100%;
+    }
+
+    .blog-page-section .blog-main-content .blog .custom-list {
+        max-width: 90%;
+    }
+
+    .blog-page-section .blog-main-content .blog .custom-list li {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width:575px) {
+    .blog-page-section .blog-main-content #key-takeaways {
+        padding: 1.3rem;
+    }
+
+    .blog-page-section .blog-main-content #key-takeaways .main-title {
+        font-size: 1.6rem;
+    }
+
+    .blog-page-section .blog-main-content #key-takeaways .key-list-main .key-list-icon span {
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+    }
+
+    .blog-page-section .blog-main-content #key-takeaways .key-list-main .key-list-content {
+        font-size: 0.9rem;
+    }
+
+    .blog-page-section .blog-main-content #blog-author {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+        padding: 1rem;
+        border-radius: 10px;
     }
 }
 
