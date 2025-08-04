@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    const links = document.querySelectorAll('.service-link');
+    const links = document.querySelectorAll('.blog-link');
     const sections = Array.from(links).map(link => document.getElementById(link.dataset.target));
 
     function onScroll() {
