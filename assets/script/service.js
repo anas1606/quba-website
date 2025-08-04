@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
             clickable: true,
         },
     });
+    
     const links = document.querySelectorAll('.service-link');
     const sections = Array.from(links).map(link => document.getElementById(link.dataset.target));
 
