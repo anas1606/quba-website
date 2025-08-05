@@ -525,16 +525,19 @@
 /* FAQ Section */
 .faq-section {
     padding: 80px 0;
+    background: #f8faff;
 }
 
+.faq-section .section-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+.faq-section .section-header h2{
+    margin-bottom: 5px;
+}
 .faq-container {
     max-width: 800px;
     margin: 0 auto;
-}
-
-.section-header {
-    text-align: center;
-    margin-bottom: 50px;
 }
 
 .faq-item {
@@ -563,6 +566,7 @@
     font-weight: 600;
     color: #1e293b;
     margin: 0;
+    font-family: "Poppins", sans-serif;
     flex: 1;
 }
 
