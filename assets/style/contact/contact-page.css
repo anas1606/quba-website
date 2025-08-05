@@ -260,6 +260,7 @@
     font-size: 20px;
     font-weight: 600;
     color: #1e293b;
+    font-family: "Poppins", sans-serif;
     margin-bottom: 8px;
 }
 
@@ -391,6 +392,7 @@
     font-size: 22px;
     font-weight: 600;
     color: #1e293b;
+    font-family: "Poppins", sans-serif;
     margin-bottom: 20px;
 }
 
@@ -505,6 +507,7 @@
     font-weight: 600;
     color: #1e293b;
     margin: 0;
+    font-family: "Poppins", sans-serif;
     flex: 1;
 }
 

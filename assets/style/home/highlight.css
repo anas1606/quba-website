@@ -85,10 +85,10 @@
 }
 
 .highlight-section .highlight-content .highlight-text p {
-  font-size: 48px;
+  font-size: 42px;
   line-height: 56px;
   font-weight: 300;
-  font-family: serif;
+  font-family: var(--heading-font);
 }
 
 .highlight-section .highlight-content .highlight-stats {
@@ -113,6 +113,7 @@
   line-height: 64px;
   font-weight: 300;
   margin-bottom: 15px;
+  font-family: "Poppins", sans-serif;
 }
 
 .highlight-section .highlight-content .highlight-stats .state p {

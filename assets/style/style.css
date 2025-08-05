@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@100..900&display=swap');
 @import url("./home/highlight.css");
 @import url("./home/industry.css");
 @import url("./home/hero.css");
@@ -10,6 +11,7 @@
 :root {
   --primary-color: #2563eb;
   --white-color: #fff;
+  --heading-font: "Noto Serif Georgian", serif;
 }
 
 * {
@@ -24,6 +26,30 @@ body {
   overflow-x: hidden;
   position: relative;
   scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+}
+
+.navbar h1,
+.navbar h2,
+.navbar h3,
+.navbar h4,
+.navbar h5,
+.navbar h6,
+footer h1,
+footer h2,
+footer h3,
+footer h4,
+footer h5,
+footer h6 {
+  font-family: "Poppins", sans-serif;
 }
 
 .navbar {
@@ -61,37 +87,37 @@ body {
 
 /* Logo Styling */
 .nav-logo .logo-link {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
 }
 
 .nav-logo .logo-link img {
-    height: 80px;
-    width: 80px;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 0px;
-    transition: transform 0.3s ease;
+  height: 80px;
+  width: 80px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0px;
+  transition: transform 0.3s ease;
 }
 
 .nav-logo .logo-link img:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 /* Responsive Logo */
 @media (max-width: 768px) {
-    .nav-logo .logo-link img {
-        height: 65px;
-        width: 65px;
-    }
+  .nav-logo .logo-link img {
+    height: 65px;
+    width: 65px;
+  }
 }
 
 @media (max-width: 480px) {
-    .nav-logo .logo-link img {
-        height: 50px;
-        width: 50px;
-    }
+  .nav-logo .logo-link img {
+    height: 50px;
+    width: 50px;
+  }
 }
 
 /* Navigation Menu */

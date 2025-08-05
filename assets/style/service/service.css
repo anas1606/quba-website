@@ -460,6 +460,7 @@
     font-size: 1rem;
     font-weight: 600;
     color: #333;
+    font-family: "Poppins", sans-serif;
 }
 
 .service-page-section .service-main-content #what-we-do .service-swiper-main .header .what-we-do-nav {
@@ -556,6 +557,7 @@
     font-weight: 600;
     color: #333;
     margin-bottom: 2rem;
+    font-family: "Poppins", sans-serif;
     margin-top: 0;
 }
 
@@ -582,6 +584,7 @@
     margin-bottom: 2rem;
     margin-top: 0;
     text-align: left;
+    font-family: "Poppins", sans-serif;
 }
 
 .service-main-content #what-we-do .service-swiper-main .service-card .service-details ul {
@@ -752,6 +755,7 @@
     margin-bottom: 15px;
     color: #fff;
     font-weight: 400;
+    font-family: "Poppins", sans-serif;
 }
 
 .service-main-content #service-benefits .benefits-grid {
@@ -778,6 +782,7 @@
     font-size: 1.125rem;
     font-weight: 600;
     margin: 0;
+    font-family: "Poppins", sans-serif;
 }
 
 .service-main-content #service-benefits .benefit-text {
