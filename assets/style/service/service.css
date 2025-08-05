@@ -744,7 +744,7 @@
 }
 
 .service-main-content #customer-feedback .cta-content .nav-contact-btn:hover i {
-    transform: translateX(-143px) rotate(-45deg);
+    transform: translateX(-155px) rotate(-45deg);
 }
 
 .service-main-content #customer-feedback .cta-content h3 {
@@ -997,6 +997,10 @@
         margin-left: 0;
         max-width: 100%;
         text-align: center;
+    }
+
+    .service-page-section .service-main-content {
+        padding: 0;
     }
 
     .service-hero-container .progress-aligned {

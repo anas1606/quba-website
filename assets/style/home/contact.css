@@ -192,6 +192,7 @@
     background: #FFF;
     color: #5c5b5b;
     text-decoration: none;
+    font-family: "Poppins", sans-serif;
     border: none;
     padding: 0.75rem 1.5rem;
     border-radius: 40px;
@@ -223,7 +224,7 @@
 }
 
 .btn-primary:hover i {
-    transform: translateX(-75px) rotate(-45deg);
+    transform: translateX(-84px) rotate(-45deg);
 }
 
 .btn-primary:hover span {

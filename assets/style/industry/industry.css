@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@100..900&display=swap');
+
+/* hero section start */
+.industry-hero-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px
+}
+
+.industry-hero-section .section-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 40px;
+    background-color: #F8F8F9;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.industry-hero-section .section-container .section-tag {
+    font-size: 16px;
+    color: #121212;
+    position: relative;
+    padding-left: 20px;
+}
+
+.industry-hero-section .section-container .section-tag::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border: 1px solid #121212;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 7px;
+}
+
+.industry-hero-section .section-container .section-title {
+    font-size: 48px;
+    font-weight: 500;
+    font-family: "Noto Serif Georgian", serif;
+    font-optical-sizing: auto;
+    line-height: 1.2;
+    color: #121212;
+}
+
+.industry-hero-section .section-container .section-description {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    max-width: 500px;
+    margin-left: 10%;
+}
+
+.industry-hero-section .section-container a {
+    text-decoration: none;
+    margin-left: 10%;
+    width: fit-content;
+}
+
+.industry-hero-section .section-container .section-button {
+    background-color: #1E1D28;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.industry-hero-section .section-container .section-button:hover {
+    background-color: #0045E6;
+}
+
+.industry-hero-section .section-container .section-button:hover i {
+    transform: translateX(-155px) rotate(-45deg);
+}
+
+.industry-hero-section .section-image img {
+    width: 510px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* hero section end */
+
+.industry-page-section .service-main-content .section-main-title,
+.industry-page-section .service-main-content .section-main-desc {
+    max-width: 100% !important;
+}
+
+.industry-page-section .service-main-content #service-benefits .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.industry-page-section .service-main-content #service-solutions {
+    background-color: #0f111b;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.industry-page-section .service-main-content #service-solutions .solutions-wrapper {
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.industry-page-section .service-main-content #service-solutions .solutions-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+
+.industry-page-section .service-main-content #service-solutions .solutions-image {
+    background-image: url("https://eleks.com/wp-content/uploads/services-and-financial-software-solutions-banner-min-1523x1536.jpg");
+    background-size: cover;
+    background-position: center;
+    min-width: 400px;
+    max-width: 50%;
+    /* position: sticky; */
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    z-index: 0;
+    overflow: hidden;
+    height: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+.industry-page-section .service-main-content #service-solutions .solutions-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(33, 36, 47, 0.7);
+    /* dark overlay */
+    z-index: 1;
+}
+
+.industry-page-section .service-main-content #service-solutions .solutions-image h3 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #fff;
+    position: relative;
+    z-index: 2;
+
+}
+
+.industry-page-section .service-main-content #service-solutions .solutions-image p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    position: relative;
+    z-index: 2;
+}
+
+.industry-page-section .service-main-content #service-solutions .solutions-content {
+    padding: 40px 20px 20px 0px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: fit-content;
+}
+
+.industry-page-section .service-main-content #service-solutions .solution-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    position: relative;
+    padding: 0 0 1rem 2rem;
+    border-left: 1px solid white;
+}
+
+.industry-page-section .service-main-content #service-solutions .step-icon {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 17px;
+    color: #fff;
+    background-color: #0f111b;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: -20px;
+    top: 0;
+    transition: all ease-in-out .3s;
+}
+
+.industry-page-section .service-main-content #service-solutions .step-icon i {
+    transform: rotate(45deg);
+    transition: all ease-in-out 0.3s;
+}
+
+.industry-page-section .service-main-content #service-solutions .step-icon:hover {
+    background-color: #ffffff;
+    color: #0f111b;
+}
+
+.industry-page-section .service-main-content #service-solutions .step-icon:hover i {
+    transform: rotate(-45deg);
+}
+
+/* .industry-page-section .service-main-content #service-solutions .step-icon::after {
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: calc(100vh - 300px);
+    background-color: #ffffff;
+    z-index: 0;
+} */
+
+.industry-page-section .service-main-content #service-solutions .solution-step:last-child {
+    border: none !important;
+}
+
+.industry-page-section .service-main-content #service-solutions .step-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.industry-page-section .service-main-content #service-solutions .step-details .step-title {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.industry-page-section .service-main-content #service-solutions .step-details .step-desc {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.industry-page-section .service-main-content #service-solutions .primary-link {
+    color: white;
+}
+
+.industry-page-section .service-main-content #service-solutions .primary-link a {
+    color: white;
+    margin-right: 5px;
+}
+
+@media screen and (max-width: 991px) {
+    .industry-hero-section {
+        flex-direction: column;
+        padding: 10px;
+        gap: 20px;
+    }
+
+    .industry-hero-section .section-container {
+        padding: 30px;
+    }
+
+    .industry-hero-section .section-image img {
+        width: 100%;
+        max-height: 400px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .industry-page-section .service-main-content #service-solutions .solutions-wrapper {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .industry-page-section .service-main-content #service-solutions .solutions-image {
+        max-width: 100%;
+    }
+
+    .industry-page-section .service-main-content #service-solutions .step-icon {
+        position: relative;
+        left: 0;
+    }
+
+    .industry-page-section .service-main-content #service-solutions .solutions-content {
+        padding: 20px;
+    }
+
+    .industry-page-section .service-main-content #service-solutions .solution-step {
+        border-left: none;
+        padding: 0 0 1rem 0;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .industry-hero-section .section-container .section-title {
+        font-size: 30px;
+    }
+
+    .industry-hero-section .section-container .section-description {
+        font-size: 14px;
+    }
+
+    .industry-hero-section .section-image img {
+        max-height: 300px;
+    }
+
+    .industry-page-section .service-main-content #service-benefits .benefits-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}
