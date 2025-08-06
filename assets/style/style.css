@@ -185,7 +185,7 @@ footer h6 {
   width: 1106px;
   background: var(--white-color);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-  border-radius: 0 0 12px 0;
+  border-radius: 0 0 12px 12px;
   opacity: 0;
   visibility: hidden;
   display: none;
@@ -265,11 +265,15 @@ footer h6 {
   cursor: pointer;
 }
 
-.navbar .nav-menu .mega-menu .service-card:hover h4 {
+.navbar .nav-menu .mega-menu .service-card a {
+  text-decoration: none;
+}
+
+.navbar .nav-menu .mega-menu .service-card a:hover h4 {
   color: var(--primary-color);
 }
 
-.navbar .nav-menu .mega-menu .service-card:hover .service-icon {
+.navbar .nav-menu .mega-menu .service-card a:hover .service-icon {
   background: var(--primary-color);
   color: var(--white-color);
 }
@@ -480,7 +484,7 @@ footer h6 {
   width: 1106px;
   background: var(--white-color);
   /* box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15); */
-  border-radius: 0 0 12px 0;
+  border-radius: 0 0 12px 12px;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
