@@ -75,7 +75,7 @@
 }
 
 .industry-hero-section .section-container .section-button:hover i {
-    transform: translateX(-155px) rotate(-45deg);
+    transform: translateX(-158px) rotate(-45deg);
 }
 
 .industry-hero-section .section-image img {
@@ -119,7 +119,6 @@
 
 
 .industry-page-section .service-main-content #service-solutions .solutions-image {
-    background-image: url("../../images/industry/quba-infotech-fintech-2.png");
     background-size: cover;
     background-position: center;
     min-width: 400px;
@@ -135,6 +134,18 @@
     position: sticky;
     top: 0;
     left: 0;
+}
+
+.industry-page-section .service-main-content #service-solutions .solutions-image.fintech-solution-image {
+    background-image: url("../../images/industry/quba-infotech-fintech-2.png");
+}
+
+.industry-page-section .service-main-content #service-solutions .solutions-image.e-commerce-solution-image {
+    background-image: url("../../images/industry/quba-infotech-e-commerce.png");
+}
+
+.industry-page-section .service-main-content #service-solutions .solutions-image.energy-solution-image {
+    background-image: url("../../images/industry/quba-infotech-energy.png");
 }
 
 .industry-page-section .service-main-content #service-solutions .solutions-image::before {
