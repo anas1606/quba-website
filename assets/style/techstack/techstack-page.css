@@ -224,9 +224,10 @@ body {
 
 .alphabet-title {
     font-size: 2rem;
-    font-weight: 200;
+    font-weight: 400;
     color: var(--text-dark);
     margin-bottom: 0.5rem;
+    font-family: "Poppins", sans-serif;
     text-align: left;
 }
 
@@ -298,6 +299,7 @@ body {
     font-size: 1.1rem;
     font-weight: 600;
     color: var(--text-dark);
+    font-family: "Poppins", sans-serif;
     margin: 0;
 }
 
