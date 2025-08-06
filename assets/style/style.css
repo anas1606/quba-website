@@ -515,6 +515,7 @@ footer h6 {
   border-radius: 6px;
   color: #f9fafb;
   cursor: pointer;
+  text-decoration: none;
   /* height: fit-content; */
   transition: background 0.3s, color 0.3s;
 }
