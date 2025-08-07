@@ -144,6 +144,10 @@
     background-image: url("../../images/industry/quba-infotech-e-commerce.png");
 }
 
+.industry-page-section .service-main-content #service-solutions .solutions-image.agriculture-solution-image {
+    background-image: url("../../images/industry/quba-infotech-agriculture.png");
+}
+
 .industry-page-section .service-main-content #service-solutions .solutions-image.energy-solution-image {
     background-image: url("../../images/industry/quba-infotech-energy.png");
 }
