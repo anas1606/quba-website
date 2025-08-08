@@ -1,0 +1,100 @@
+.service-hero-section {
+    background-image: url('/assets/images/service-hero-bg.webp');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-repeat: no-repeat;
+    min-height: 70vh;
+    width: 95vw;
+    margin: 20px auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.service-hero-section .section-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 6%;
+    position: relative;
+    z-index: 2;
+}
+
+.service-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 20, 20, 0.55);
+    /* Adjust opacity as needed */
+    z-index: 1;
+    border-radius: 10px;
+    pointer-events: none;
+    /* Allows clicks through to content */
+}
+
+.service-hero-section .section-container .right-section h1 {
+    color: #fff;
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.service-hero-section .section-container .right-section p {
+    color: #fff;
+    max-width: 500px;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    margin-left: 10%;
+}
+
+.service-hero-section .section-container .left-section {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.service-hero-section .section-container .left-section img {
+    width: auto;
+    height: 60px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+    .service-hero-section .section-container {
+        flex-direction: column;
+        gap: 20px;
+        height: 100%;
+        padding: 20px 6%;
+    }
+
+    .service-hero-section .section-container .right-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .service-hero-section .section-container .right-section p {
+        max-width: 90%;
+        font-size: 15px;
+        font-weight: 400;
+        margin-bottom: 10px;
+        margin-left: 10%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .service-hero-section .section-container .left-section {
+        gap: 1rem;
+    }
+}
