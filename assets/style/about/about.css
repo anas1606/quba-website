@@ -1,68 +1,118 @@
-/* hero section start */
-.about-hero-section {
-    position: relative;
-    /* padding: 3rem 0; */
-    width: 95vw;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    overflow: hidden;
-    background-color: white;
+:root {
+    --rows: 10;
+    --cols: 17;
 }
 
-.hero-bg-video {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.about-hero-container {
+    position: relative;
+    width: 100vw;
+    height: calc(100vh - 70px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: linear-gradient(135deg, #006aff, #ff4545, #006aff) -100%/ 200%;
+    animation: shimmer 2s linear infinite;
+}
+
+.about-hero-container .image-grid {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(var(--cols), 1fr);
+    grid-template-rows: repeat(var(--rows), 1fr);
+    perspective: 1200px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.about-hero-container .image-grid::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5));
+    position: absolute;
+    z-index: 2;
+}
+
+.about-hero-container .grid-cell {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform .3s ease-in-out;
+}
+
+.about-hero-container .grid-cell.flip {
+    transform: rotateY(180deg);
+}
+
+.about-hero-container .face {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 70vh;
-    object-fit: cover;
-    z-index: 0;
-    filter: brightness(0.5);
-    pointer-events: none;
+    height: 100%;
+    backface-visibility: hidden;
+    background-size: calc(100% * var(--cols)) calc(100% * var(--rows));
+    background-repeat: no-repeat;
 }
 
-.about-hero-section .hero-card {
-    position: relative;
-    z-index: 1;
-    width: 10%;
-    background-color: transparent;
-    /* semi-transparent, for text clarity */
-    min-height: 70vh;
-    border-radius: 10px;
-    backdrop-filter: blur(2px);
+.about-hero-container .front {
+    transform: rotateY(0deg);
 }
 
-.about-hero-section .first-card {
-    width: 70% !important;
+.about-hero-container .back {
+    transform: rotateY(180deg);
+}
+
+.about-hero-container .content-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 20px;
     justify-content: center;
-    padding: 0 3rem;
-}
-
-.about-hero-section .hero-card .hero-title {
-    font-size: 56px;
-    line-height: 1;
-    font-weight: 300;
+    align-items: center;
     color: white;
+    z-index: 3;
 }
 
-.about-hero-section .hero-card .hero-content {
-    max-width: 500px;
-    margin-left: 10%;
+.about-hero-container .content-container h1 {
+    font-size: 8rem;
+}
+
+.about-hero-container .content-container p {
+    font-size: 18px;
+    max-width: 60%;
+    text-align: center;
     margin-top: 2rem;
+    color: white;
 }
 
-.about-hero-section .hero-card .hero-content .hero-text {
-    font-size: 15px;
-    line-height: 1.6;
-    font-weight: 400;
-    margin-bottom: 20px;
-    color: white;
+.loading-text {
+    place-self: center;
+    background: linear-gradient(135deg, #006aff, #ff4545, #006aff) -100%/ 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shimmer 2s linear infinite;
+}
+
+@keyframes shimmer {
+    to {
+        background-position: 100%;
+    }
 }
 
 /* solution start */
@@ -115,6 +165,14 @@
 }
 
 @media screen and (max-width: 768px) {
+    .about-hero-container .content-container h1 {
+        font-size: 5rem;
+    }
+
+    .about-hero-container .content-container p {
+        font-size: 16px;
+        max-width: 70%;
+    }
 
     .pr-solve-section,
     .vision-mission-section {
@@ -129,6 +187,18 @@
 }
 
 @media screen and (max-width: 576px) {
+    .about-hero-container .content-container h1 {
+        font-size: 3rem;
+    }
+
+    .about-hero-container {
+        height: calc(80vh - 70px);
+    }
+
+    .about-hero-container .content-container p {
+        font-size: 16px;
+        max-width: 90%;
+    }
 
     .pr-solve-section,
     .vision-mission-section {
