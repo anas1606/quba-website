@@ -1104,6 +1104,18 @@
         font-size: 16px;
     }
 
+    .service-main-content #customer-feedback .right-section {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .service-main-content #customer-feedback .right-section video {
+        width: 100%;
+        height: 150px;
+    }
+
     .service-hero-container .stat-number {
         font-size: 1.25rem;
     }
