@@ -320,13 +320,6 @@ footer h6 {
   font-size: 12px;
 }
 
-/* Right Side Items */
-.navbar .nav-right {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
 .navbar .nav-contact-btn {
   background: #1f2937;
   color: white;
@@ -438,8 +431,7 @@ footer h6 {
 
 @media (max-width: 768px) {
 
-  .navbar .nav-menu,
-  .navbar .nav-right .search-btn {
+  .navbar .nav-menu {
     display: none;
   }
 
@@ -786,7 +778,7 @@ footer {
 
 .footer-content {
   display: grid;
-  grid-template-columns: 300px repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 40px;
   margin-bottom: 40px;
 }
